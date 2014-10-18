@@ -30,7 +30,7 @@ var work = {
     "description" : "Developing games and applications for the iPhone OS. Coordinated development with a geographically distributed team. Prompted the company to implement updates to infrastructure to improve productivity.",
     "roles" : ["Tool Programmer. Aided in the development of a stage editor for a game, done in Java. (April 2008 to May 2008)", "Circulate and Circulate Prologue. Originally a PC based game; it was ported to the iPhone platform. With this game, as in previous products we attempted to use every user-friendly feature on the iPhone, including it\'s 3d sound capabilities and the accelerometer. This game earned a bronze medal from pocketgamer.co.uk."]
   },
-  {	
+  {
     "employer" : "Gameloft",
     "title" : "iPhone Programmer",
     "location" : "Mexicali, Baja California, Mexico",
@@ -38,7 +38,7 @@ var work = {
     "description" : "Part of a team doing R&D for the iPhone OS, taking pieces of code from different platforms in order to exploit the full capabilities of the iPhone. This development team was the first to have a game ported on to the iPhone for the company, giving our local studio an edge against the other competing offices within the company.",
     "roles" : []
   },
-//   {	
+//   {
 //     "employer" : "",
 //     "title" : "",
 //     "location" : "",
@@ -79,7 +79,18 @@ var projects = {
 //     "description" : "",
 //     "images" : []
 //   }
-  ]
+  ],
+  display : function(){
+    for(var p in projects.projects){
+      $("#projects").append(HTMLprojectStart);
+      $(".project-entry:last").append(HTMLprojectTitle.replace("%data%", projects.projects[p].title));
+      $(".project-entry:last").append(HTMLprojectDates.replace("%data%", projects.projects[p].dates));
+      $(".project-entry:last").append(HTMLprojectDescription.replace("%data%", projects.projects[p].description));
+      for(var i in projects.projects[p].images){
+        $(".project-entry:last").append(HTMLprojectImage.replace("%data%", projects.projects[p].images[i]));
+      }
+    }
+  }
 };
 
 var bio = {
@@ -108,6 +119,12 @@ var bio = {
         "twitter": "larc63",
         "github": "larc63",
         "location": "Dallas, TX"
+    },
+    displaySkills : function(){
+      $("#header").append(HTMLskillsStart);
+      for(var i in bio.skills){
+        $("#skills").append(HTMLskills.replace("%data%", bio.skills[i]));
+      }
     }
 };
 
@@ -144,12 +161,6 @@ var education = {
 $("#header").prepend(HTMLheaderRole.replace("%data%", bio.role));
 $("#header").prepend(HTMLheaderName.replace("%data%", bio.name));
 
-bio.displaySkills = function(){
-  $("#header").append(HTMLskillsStart);
-  for(var i in bio.skills){
-    $("#skills").append(HTMLskills.replace("%data%", bio.skills[i]));
-  }
-}
 bio.displaySkills();
 
 for(var job in work.jobs){
@@ -171,19 +182,7 @@ var inName = function(){
 
 // $("#main").append(internationalizeButton);
 
-projects.display = function(){
-  for(var p in projects.projects){
-    $("#projects").append(HTMLprojectStart);
-    $(".project-entry:last").append(HTMLprojectTitle.replace("%data%", projects.projects[p].title));
-    $(".project-entry:last").append(HTMLprojectDates.replace("%data%", projects.projects[p].dates));
-    $(".project-entry:last").append(HTMLprojectDescription.replace("%data%", projects.projects[p].description));
-    for(var i in projects.projects[p].images){
-      $(".project-entry:last").append(HTMLprojectImage.replace("%data%", projects.projects[p].images[i]));
-    }
-  }
-}
-
 projects.display();
 
 
-$("#mapDiv").append(googleMap);
+// $("#mapDiv").append(googleMap);

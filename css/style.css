@@ -4,18 +4,14 @@
     font-family: 'Roboto', sans-serif;
 }
 
-
-
 .education-entry, .work-entry, .project-entry {
   padding-left: 5%;
   padding-right: 5%;
 }
 
-
 h1 {
-
   font-size: 40px;
-  color: #F5A623;
+  color: #2760CB;
   line-height: 48px;
   display: inline;
 }
@@ -87,7 +83,7 @@ a {
 }
 
 #skillsH3 {
-  color: #F5AE23;
+  color: #2760CB;
   display: none;
 }
 
@@ -108,6 +104,11 @@ a {
   color: #FFFFFF;
 }
 
+.green-text {
+  font-weight: bold;
+  color: #404E41;
+}
+
 .gray {
   background-color: #F3F3F3;
   padding-bottom: 10px;
@@ -115,12 +116,13 @@ a {
 }
 
 .dark-gray {
-  background-color: #4A4A4A;
+  background-color: #93977C;
 }
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  /*background-color: #484848;*/
+  background-color: #BFC5C6;
 }
 
 .flex-box {
@@ -167,6 +169,7 @@ img {
 
 span {
   padding: 5px;
+  color: #404E41;
 }
 
 #letsConnect {

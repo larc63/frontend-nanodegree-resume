@@ -15,6 +15,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 <scripts> for JavaScript files to build interactions.
 -->
 <head>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
   <link href="css/style.css" rel="stylesheet" type="text/css"></link>
 
   <!--
@@ -44,7 +45,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <meta name="viewport" content="width=device-width">
 </head>
 <body unresolved>
-  <div id="main">
+  <div id="main" class="container">
 
     <!--
     Everything from here to the <script> tag below is the skeleton of your
@@ -52,30 +53,45 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     resume below. You can pretty easily figure out what each section will
     display by looking at the id or at what's written between the <h2> tags.
     -->
-    <div id="header" class="center-content">
-      <ul id="topContacts" class='flex-box'></ul>
+    <div class="row  dark-gray">
+      <div id="header" class="col-md-10">
+        <!-- <ul id="topContacts" class='flex-box'></ul> -->
+      </div>
+      <div id="letsConnect" class='col-md-2'>
+        <h2 class='orange center-text'>Contact</h2>
+        <!-- <ul id="footerContacts" class="flex-box"> -->
+        </ul>
+      </div>
     </div>
-    <div style='clear: both;'></div>
-    <div id="workExperience" class='gray'>
-      <h2>Work Experience</h2>
+    <div class="row">
+      <div style='clear: both;'></div>
+      <div id="workExperience" class='gray'>
+        <h2>Work Experience</h2>
+      </div>
     </div>
-    <div id="projects">
-      <h2>Projects</h2>
+
+    <div class="row">
+      <div id="projects">
+        <h2>Projects</h2>
+      </div>
     </div>
-    <div id="education" class='gray'>
-      <h2>Education</h2>
+
+    <div class="row">
+      <div id="education" class='gray'>
+        <h2>Education</h2>
+      </div>
     </div>
-    <div id="skillsChart">
-      <h2>Skills Chart</h2>
+
+    <div class="row">
+      <div id="skillsChart">
+        <h2>Skills Chart</h2>
+      </div>
     </div>
-    <div id="mapDiv">
+
+    <!-- <div id="mapDiv">
       <h2>Where I've Lived and Worked</h2>
-    </div>
-    <div id="letsConnect" class='dark-gray'>
-      <h2 class='orange center-text'>Let's Connect</h2>
-      <ul id="footerContacts" class="flex-box">
-      </ul>
-    </div>
+    </div> -->
+
   </div>
 
   <!--
