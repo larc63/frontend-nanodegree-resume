@@ -56,29 +56,29 @@ var projects = {
     "location": "Mexicali, Baja California, Mexico",
     "dates" : "2009",
     "description" : "Chinese character writing tutor for the iPhone",
-    "images" : []
+    "images" : ["images/ChineseCharacters/01.jpeg", "images/ChineseCharacters/02.jpeg", "images/ChineseCharacters/03.jpeg", "images/ChineseCharacters/04.jpeg", "images/ChineseCharacters/05.jpeg"]
   },
   {
     "title" : "Big 2 Poker",
     "location": "Mexicali, Baja California, Mexico",
     "dates" : "2010",
     "description" : "Card game for the iPhone and made all graphics.",
-    "images" : []
+    "images" : ["images/Big2Poker/01.jpeg", "images/Big2Poker/02.jpeg", "images/Big2Poker/03.jpeg", "images/Big2Poker/04.jpeg", "images/Big2Poker/05.jpeg"]
   },
-  {
-    "title" : "",
-    "location": "Mexicali, Baja California, Mexico",
-    "dates" : "2010",
-    "description" : "",
-    "images" : []
-  },
-  {
-    "title" : "",
-    "location": "Mexicali, Baja California, Mexico",
-    "dates" : "2010",
-    "description" : "",
-    "images" : []
-  }
+//   {
+//     "title" : "",
+//     "location": "Mexicali, Baja California, Mexico",
+//     "dates" : "2010",
+//     "description" : "",
+//     "images" : []
+//   },
+//   {
+//     "title" : "",
+//     "location": "Mexicali, Baja California, Mexico",
+//     "dates" : "2010",
+//     "description" : "",
+//     "images" : []
+//   }
   ]
 };
 
