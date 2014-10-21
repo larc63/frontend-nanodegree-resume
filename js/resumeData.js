@@ -73,6 +73,7 @@ var data = {
                 "dates": "2009",
                 "description": "Chinese character writing tutor for the iPhone",
                 "images": [
+                    "images/ChineseCharacters/thumb.jpeg",
                     "images/ChineseCharacters/01.jpeg",
                     "images/ChineseCharacters/02.jpeg",
                     "images/ChineseCharacters/03.jpeg",
@@ -86,6 +87,7 @@ var data = {
                 "dates": "2010",
                 "description": "Card game for the iPhone and made all graphics.",
                 "images": [
+                    "images/Big2Poker/thumb.jpeg",
                     "images/Big2Poker/01.jpeg",
                     "images/Big2Poker/02.jpeg",
                     "images/Big2Poker/03.jpeg",

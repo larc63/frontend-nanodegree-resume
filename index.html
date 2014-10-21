@@ -15,6 +15,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 <scripts> for JavaScript files to build interactions.
 -->
 <head>
+  <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
   <link href="css/style.css" rel="stylesheet" type="text/css"></link>
 
@@ -32,6 +33,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   you can't accomplish with vanilla (regular) JavaScript.
   -->
   <script src="js/jQuery.js"></script>
+  <script src="js/bootstrap.js"></script>
 
   <!-- More on helper.js in the class -->
   <script src="js/helper.js"></script>
@@ -45,6 +47,12 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <meta name="viewport" content="width=device-width">
 </head>
 <body unresolved>
+  <div id="letsConnect" class='col-md-2'  data-spy="affix" data-offset-top="90">
+    <h2 class='orange center-text'>Contact</h2>
+      <ul id="footerContacts" class="flex-box">
+    </ul>
+  </div>
+
   <div id="main" class="container">
 
     <!--
@@ -53,14 +61,11 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     resume below. You can pretty easily figure out what each section will
     display by looking at the id or at what's written between the <h2> tags.
     -->
+
+
     <div class="row  dark-gray">
-      <div id="header" class="col-md-10">
+      <div id="header" class="col-md-12">
         <!-- <ul id="topContacts" class='flex-box'></ul> -->
-      </div>
-      <div id="letsConnect" class='col-md-2'>
-        <h2 class='orange center-text'>Contact</h2>
-        <!-- <ul id="footerContacts" class="flex-box"> -->
-        </ul>
       </div>
     </div>
     <div class="row">
@@ -88,9 +93,9 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
       </div>
     </div>
 
-    <!-- <div id="mapDiv">
+    <div id="mapDiv">
       <h2>Where I've Lived and Worked</h2>
-    </div> -->
+    </div>
 
   </div>
 

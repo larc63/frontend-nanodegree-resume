@@ -6,6 +6,7 @@ function ResumeBuilder(){
     this.displayWorkExperience();
     this.displayProjects();
     this.displayEducation();
+    $("#mapDiv").append(googleMap);
   };
 
   this.displaySkills = function(){
@@ -53,18 +54,8 @@ function ResumeBuilder(){
         $(".education-entry:last").append(HTMLschoolDates.replace("%data%", data.education.schools[s].dates));
         $(".education-entry:last").append(HTMLschoolLocation.replace("%data%", data.education.schools[s].location));
         $(".education-entry:last").append(HTMLschoolMajor.replace("%data%", data.education.schools[s].majors[0]));
-
-
-        // var HTMLschoolName = "<a href='#'>%data%";
-        // var HTMLschoolDegree = " -- %data%</a>";
-        // var HTMLschoolDates = "<div class='date-text'>%data%</div>";
-        // var HTMLschoolLocation = "<div class='location-text'>%data%</div>";
-        // var HTMLschoolMajor = "<em><br>Major: %data%</em>"
       }
-  }
+  };
 };
 
 new ResumeBuilder().addAll();
-
-
-// $("#mapDiv").append(googleMap);
