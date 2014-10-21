@@ -9,6 +9,10 @@
   padding-right: 5%;
 }
 
+hr {
+    color: #404E41;
+}
+
 h1 {
   font-size: 40px;
   color: #2760CB;
@@ -19,7 +23,7 @@ h1 {
 h2 {
   font-style: bold;
   font-size: 24px;
-  color: #999999;
+  color: #404E41;
   line-height: 29px;
   padding: 10px;
 }
@@ -48,7 +52,7 @@ h2, h3, h4, h5 {
 .date-text {
   font-style: italic;
   font-size: 14px;
-  color: #999999;
+  color: #404E41;
   line-height: 16px;
   float: left;
 }
@@ -56,7 +60,7 @@ h2, h3, h4, h5 {
 .location-text {
   font-style: italic;
   font-size: 14px;
-  color: #999999;
+  color: #404E41;
   line-height: 16px;
   float: right;
 
@@ -69,7 +73,7 @@ p {
 }
 
 a {
-  color: #1199C3;
+  color: #2760CB;
   text-decoration: none;
   margin-top: 10px;
   display: block;
@@ -92,11 +96,11 @@ a {
 }
 
 .orange {
-  background-color: #F5AE23;
+  background-color: #93977C;
 }
 
 .orange-text {
-  color: #F5AE23;
+  color: #2760CB;
 }
 
 .white-text {
@@ -110,13 +114,13 @@ a {
 }
 
 .gray {
-  background-color: #F3F3F3;
+  background-color: #FFF;
   padding-bottom: 10px;
   clear:both;
 }
 
 .dark-gray {
-  background-color: #93977C;
+  background-color: #BFC5C6;
 }
 
 /* TODO: Replace with image later */

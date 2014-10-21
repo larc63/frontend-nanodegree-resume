@@ -2,6 +2,7 @@
 function ResumeBuilder(){
   this.addAll = function(){
     this.displayBio();
+    this.displayContacts();
     this.displaySkills();
     this.displayWorkExperience();
     this.displayProjects();
@@ -43,9 +44,17 @@ function ResumeBuilder(){
       // for(var i in projects.projects[p].images){
       //   $(".project-entry:last").append(HTMLprojectImage.replace("%data%", projects.projects[p].images[i]));
       // }
-    }
+    }      
   };
 
+    
+  this.displayContacts = function(){
+    for(c in data.bio.contacts){
+//        console.log(c + ": " + data.bio.contacts[c]);
+        $("#footerContacts").append(HTMLcontactGeneric.replace("%data%", data.bio.contacts[c]).replace("%contact%", c));
+    }
+  };
+    
   this.displayEducation = function(){
       for(var s in data.education.schools){
         $("#education").append(HTMLschoolStart);
