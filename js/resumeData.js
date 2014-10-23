@@ -11,9 +11,9 @@ var data = {
             "Glue: Java Native Interface, Lua glue, JSObject"
         ],
         "contacts": {
-            "mobile": "972-850-6310",
+            "mobile": "+1 972-850-6310",
             "email": "larc63@gmail.com",
-            "twitter": "larc63",
+            "twitter": "@larc63",
             "github": "larc63",
             "location": "Dallas, TX"
         }
