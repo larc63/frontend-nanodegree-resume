@@ -7,7 +7,8 @@
 .education-entry, .work-entry, .project-entry {
   padding-left: 5%;
   padding-right: 5%;
-
+}
+.education-entry, .work-entry{
   border-bottom-color: #BFC5C6;
   border-bottom-style: solid;
   border-bottom-width: 1px;

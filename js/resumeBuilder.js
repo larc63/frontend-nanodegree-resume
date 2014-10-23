@@ -35,26 +35,27 @@ function ResumeBuilder(){
   this.displayProjects = function(){
     for(var p in data.projects.projects){
       $("#projects").append(HTMLprojectStart);
-      $(".project-entry:last").append(HTMLprojectTitle.replace("%data%", data.projects.projects[p].title));
-      $(".project-entry:last").append(HTMLprojectDates.replace("%data%", data.projects.projects[p].dates));
-      $(".project-entry:last").append(HTMLprojectDescription.replace("%data%", data.projects.projects[p].description));
+      var s = HTMLprojectTitle.replace("%data%", data.projects.projects[p].title);
+      s += HTMLprojectDates.replace("%data%", data.projects.projects[p].dates);
+      s += HTMLprojectDescription.replace("%data%", data.projects.projects[p].description);
+      $(".project-entry:last").append(s);
       if(typeof data.projects.projects[p].images[0] === "string"){
         $(".project-entry:last").append(HTMLprojectImage.replace("%data%", data.projects.projects[p].images[0]));
       }
       // for(var i in projects.projects[p].images){
       //   $(".project-entry:last").append(HTMLprojectImage.replace("%data%", projects.projects[p].images[i]));
       // }
-    }      
+    }
   };
 
-    
+
   this.displayContacts = function(){
     for(c in data.bio.contacts){
 //        console.log(c + ": " + data.bio.contacts[c]);
         $("#footerContacts").append(HTMLcontactGeneric.replace("%data%", data.bio.contacts[c]).replace("%contact%", c));
     }
   };
-    
+
   this.displayEducation = function(){
       for(var s in data.education.schools){
         $("#education").append(HTMLschoolStart);

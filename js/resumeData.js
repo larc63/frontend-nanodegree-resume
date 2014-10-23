@@ -100,7 +100,7 @@ var data = {
     "education": {
         "schools": [
             {
-                "name": "Centro de Investigación Científica y Educación Superior de Ensenada",
+                "name": "Centro de Investigacion Cientifica y Educacion Superior de Ensenada",
                 "location": "Ensenada, B. C., Mexico",
                 "degree": "Master's",
                 "majors": [
@@ -110,7 +110,7 @@ var data = {
                 "url": "http://www.cicese.edu.mx/"
             },
             {
-                "name": "Instituto Tecnológico y de Estudios Superiores de Monterrey ",
+                "name": "Instituto Tecnologico y de Estudios Superiores de Monterrey ",
                 "location": "Monterrey, N. L.",
                 "degree": "Bachelor's",
                 "majors": [
