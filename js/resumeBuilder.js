@@ -11,9 +11,9 @@ function ResumeBuilder(){
   };
 
   this.displaySkills = function(){
-    $("#header").append(HTMLskillsStart);
+    $("#skillsDiv").append(HTMLskillsStart);
     for(var i in data.bio.skills){
-      $("#skills").append(HTMLskills.replace("%data%", data.bio.skills[i]));
+      $("#skillsDiv").append(HTMLskills.replace("%data%", data.bio.skills[i]));
     }
   };
 
@@ -54,6 +54,16 @@ function ResumeBuilder(){
 //        console.log(c + ": " + data.bio.contacts[c]);
         $("#footerContacts").append(HTMLcontactGeneric.replace("%data%", data.bio.contacts[c]).replace("%contact%", c));
     }
+
+    // var HTMLcontactGeneric = "<li><span class='orange-text'>%contact%</span><span class='green-text'>%data%</span></li>";
+    // var HTMLmobile = "<li class='flex-item'><span class='orange-text'>mobile</span><span class='green-text'>%data%</span></li>";
+    // var HTMLemail = "<li class='flex-item'><span class='orange-text'>email</span><span class='green-text'>%data%</span></li>";
+    // var HTMLtwitter = "<li class='flex-item'><span class='orange-text'>twitter</span><span class='green-text'>%data%</span></li>";
+    // var HTMLgithub = "<li class='flex-item'><span class='orange-text'>github</span><span class='green-text'>%data%</span></li>";
+    // var HTMLblog = "<li class='flex-item'><span class='orange-text'>blog</span><span class='green-text'>%data%</span></li>";
+    // var HTMLlocation = "<li class='flex-item'><span class='orange-text'>location</span><span class='green-text'>%data%</span></li>";
+
+
   };
 
   this.displayEducation = function(){
