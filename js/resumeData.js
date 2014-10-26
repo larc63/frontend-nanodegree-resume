@@ -122,10 +122,58 @@ var data = {
         ],
         "onlineCourses": [
             {
+                "title": "Javascript Basics",
+                "school": "Udacity",
+                "dates": "2014",
+                "url": "https://www.udacity.com/course/ud804"
+            },
+            {
+                "title": "Intro to HTML and CSS",
+                "school": "Udacity",
+                "dates": "2014",
+                "url": "https://www.udacity.com/course/ud304"
+            },
+            {
                 "title": "HTML5 Game Development",
                 "school": "Udacity",
                 "dates": "2014",
                 "url": "https://www.udacity.com/course/cs255"
+            },
+            {
+                "title": "jQuery",
+                "school": "Codecademy",
+                "dates": "2013",
+                "url": "http://www.codecademy.com/tracks/jquery"
+            },
+            {
+                "title": "JavaScript",
+                "school": "Codecademy",
+                "dates": "2013",
+                "url": "http://www.codecademy.com/tracks/javascript"
+            },
+            {
+                "title": "Software Testing",
+                "school": "Udacity",
+                "dates": "2012",
+                "url": "https://www.udacity.com/course/cs258"
+            },
+            {
+                "title": "Web Application Egineering",
+                "school": "Udacity",
+                "dates": "2012",
+                "url": "https://www.udacity.com/course/cs253"
+            },
+            {
+                "title": "Artificial Intellingence for Robotics",
+                "school": "Udacity",
+                "dates": "2012",
+                "url": "https://www.udacity.com/course/cs373"
+            },
+            {
+                "title": "Introduction to Artificial Intelligence",
+                "school": "Udacity",
+                "dates": "2011",
+                "url": "http://www.ai-class.com"
             }
         ]
     }

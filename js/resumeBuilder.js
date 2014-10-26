@@ -66,6 +66,14 @@ function ResumeBuilder(){
         $(".education-entry:last").append(HTMLschoolLocation.replace("%data%", data.education.schools[s].location));
         $(".education-entry:last").append(HTMLschoolMajor.replace("%data%", data.education.schools[s].majors[0]));
       }
+    $("#education").append(HTMLonlineClasses);
+      
+      for (var s in data.education.onlineCourses){
+        $("#education").append(HTMLonlineTitle.replace("%data%", data.education.onlineCourses[s].title));
+        $("#education").append(HTMLonlineSchool.replace("%data%", data.education.onlineCourses[s].school));
+        $("#education").append(HTMLonlineDates.replace("%data%", data.education.onlineCourses[s].dates));
+        $("#education").append(HTMLonlineURL.replace("%data%", data.education.onlineCourses[s].url));
+      }
   };
 };
 
