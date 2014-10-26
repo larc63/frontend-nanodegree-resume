@@ -137,7 +137,8 @@ var data = {
                 "title": "HTML5 Game Development",
                 "school": "Udacity",
                 "dates": "2014",
-                "url": "https://www.udacity.com/course/cs255"
+                "url": "https://www.udacity.com/course/cs255",
+                "certificate" : "res/CS255.pdf"
             },
             {
                 "title": "jQuery",
@@ -155,25 +156,29 @@ var data = {
                 "title": "Software Testing",
                 "school": "Udacity",
                 "dates": "2012",
-                "url": "https://www.udacity.com/course/cs258"
+                "url": "https://www.udacity.com/course/cs258",
+                "certificate" : "res/CS258.pdf"
             },
             {
-                "title": "Web Application Egineering",
+                "title": "Web Application Engineering",
                 "school": "Udacity",
                 "dates": "2012",
-                "url": "https://www.udacity.com/course/cs253"
+                "url": "https://www.udacity.com/course/cs253",
+                "certificate" : "res/CS253.pdf"
             },
             {
                 "title": "Artificial Intellingence for Robotics",
                 "school": "Udacity",
                 "dates": "2012",
-                "url": "https://www.udacity.com/course/cs373"
+                "url": "https://www.udacity.com/course/cs373",
+                "certificate" : "res/CS373.pdf"
             },
             {
                 "title": "Introduction to Artificial Intelligence",
                 "school": "Udacity",
                 "dates": "2011",
-                "url": "http://www.ai-class.com"
+                "url": "http://www.ai-class.com",
+                "certificate" : "res/AI_letter_signed.pdf"
             }
         ]
     }

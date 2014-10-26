@@ -72,7 +72,13 @@ function ResumeBuilder(){
         $("#education").append(HTMLonlineTitle.replace("%data%", data.education.onlineCourses[s].title));
         $("#education").append(HTMLonlineSchool.replace("%data%", data.education.onlineCourses[s].school));
         $("#education").append(HTMLonlineDates.replace("%data%", data.education.onlineCourses[s].dates));
-        $("#education").append(HTMLonlineURL.replace("%data%", data.education.onlineCourses[s].url));
+          var url = HTMLonlineURL.replace("%data%", data.education.onlineCourses[s].url);
+//          var certificateURL = data.education.onlineCourses[s].certificate;
+//          if(typeof certificateURL !== "undefined"){
+//            $("#education").append(url + HTMLonlineCertificate.replace("%data%", certificateURL));
+//          }else{
+            $("#education").append(url);
+//          }
       }
   };
 };
