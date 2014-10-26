@@ -84,13 +84,6 @@ a {
   display: block;
 }
 
-.welcome-message {
-  font-style: italic;
-  font-size: 18px;
-  color: #F3F3F3;
-  line-height: 28px;
-}
-
 #skillsH3 {
   color: #2760CB;
   display: none;
@@ -151,14 +144,6 @@ ul {
   list-style-type: none;
 }
 
-
-.biopic {
-  float: left;
-  padding: 10px;
-  width: 200px;
-  display: none;
-}
-
 img {
   padding: 10px;
 }
@@ -197,27 +182,30 @@ span {
   text-align: center;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1770px) {
   #letsConnect {
-    /*margin-top: 5%;*/
-  }
-}
-
-@media only screen and (max-width:900px) {
-  .biopic {
-    width: 175px;
-  }
-}
-
-@media only screen and (max-width: 750px) {
-  #letsConnect {
-    margin-top: 10%;
-  }
-  .biopic {
-    width: 150px;
-  }
-  .welcome-message {
     display: none;
+  }
+  #letsConnectInner {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1770px) {
+  #letsConnect {
+    display: block;
+  }
+  #letsConnectInner {
+    display: none;
+  }
+}
+
+@media only print and (max-width: 1770px) {
+  #letsConnect, #mapDiv {
+    display: none;
+  }
+  #letsConnectInner {
+    display: block;
   }
 }
 
@@ -236,8 +224,7 @@ span {
 
 @media only screen and (min-width: 750px) {
   #skillsH3,
-  #skills,
-  .biopic {
+  #skills {
     display: block;
   }
 }

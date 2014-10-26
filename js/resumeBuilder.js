@@ -53,6 +53,7 @@ function ResumeBuilder(){
     for(c in data.bio.contacts){
 //        console.log(c + ": " + data.bio.contacts[c]);
         $("#footerContacts").append(HTMLcontactGeneric.replace("%data%", data.bio.contacts[c]).replace("%contact%", c));
+        $("#footerContactsInner").append(HTMLcontactGeneric.replace("%data%", data.bio.contacts[c]).replace("%contact%", c));
     }
 
     // var HTMLcontactGeneric = "<li><span class='orange-text'>%contact%</span><span class='green-text'>%data%</span></li>";
