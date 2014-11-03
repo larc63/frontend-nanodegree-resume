@@ -4,11 +4,11 @@
     font-family: 'Oxygen', sans-serif;
 }
 
-.education-entry, .work-entry, .project-entry {
+.education-entry, .work-entry, .project-entry, .online-course {
   padding-left: 5%;
   padding-right: 5%;
 }
-.education-entry, .work-entry{
+.education-entry, .work-entry, .online-course{
   border-bottom-color: #BFC5C6;
   border-bottom-style: solid;
   border-bottom-width: 1px;
@@ -58,7 +58,7 @@ h2, h3, h4, h5 {
   font-style: italic;
   font-size: 14px;
   color: #404E41;
-  line-height: 16px;
+  line-height: 20px;
   float: left;
 }
 
@@ -236,10 +236,19 @@ span {
 @media print{
   h1 {
     font-size: 24px;
-    line-height: 10px;
+    line-height: 5px;
+    display: block;
+  }
+  h2 {
+    font-size: 18px;
+    line-height: 3px;
     display: block;
   }
   .project-image{
       display: none;
   }
+    
+    .education-entry, .work-entry, .online-course{
+      border-bottom-width: 0px;
+    }
 }

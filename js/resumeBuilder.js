@@ -67,18 +67,21 @@ function ResumeBuilder(){
         $(".education-entry:last").append(HTMLschoolMajor.replace("%data%", data.education.schools[s].majors[0]));
       }
     $("#education").append(HTMLonlineClasses);
-      
+      data.education.onlineCourses.reverse();
       for (var s in data.education.onlineCourses){
-        $("#education").append(HTMLonlineTitle.replace("%data%", data.education.onlineCourses[s].title));
-        $("#education").append(HTMLonlineSchool.replace("%data%", data.education.onlineCourses[s].school));
-        $("#education").append(HTMLonlineDates.replace("%data%", data.education.onlineCourses[s].dates));
-          var url = HTMLonlineURL.replace("%data%", data.education.onlineCourses[s].url);
+          var courseString = HTMLonlineStart;
+          courseString += HTMLonlineTitle.replace("%data%", data.education.onlineCourses[s].title);
+          courseString += HTMLonlineSchool.replace("%data%", data.education.onlineCourses[s].school);
+          
 //          var certificateURL = data.education.onlineCourses[s].certificate;
 //          if(typeof certificateURL !== "undefined"){
-//            $("#education").append(url + HTMLonlineCertificate.replace("%data%", certificateURL));
-//          }else{
-            $("#education").append(url);
+//            courseString = courseString + " - <a href='" + data.education.onlineCourses[s].certificate + "'>Certificate</a>";
 //          }
+          
+//          courseString += HTMLonlineDates.replace("%data%", data.education.onlineCourses[s].dates);
+          courseString += HTMLonlineURL.replace("%data%", data.education.onlineCourses[s].url).replace("%data%", data.education.onlineCourses[s].url);
+
+          $("#education").after(courseString);
       }
   };
 };

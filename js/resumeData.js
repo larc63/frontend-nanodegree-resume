@@ -118,7 +118,7 @@ var data = {
                 "location": "Monterrey, N. L.",
                 "degree": "Bachelor's",
                 "majors": [
-                    "Electronics Systems"
+                    "Electronics Systems Engineering"
                 ],
                 "dates": "1997-2001",
                 "url": "http://www.itesm.mx/"

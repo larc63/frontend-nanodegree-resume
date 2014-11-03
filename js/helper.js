@@ -47,10 +47,11 @@ var HTMLschoolLocation = "<div class='location-text'>%data%</div>";
 var HTMLschoolMajor = "<em><br>Major: %data%</em>"
 
 var HTMLonlineClasses = "<h3>Online Classes</h3>";
-var HTMLonlineTitle = "<a href='#'>%data%";
-var HTMLonlineSchool = " - %data%</a>";
+var HTMLonlineStart = "<div class='col-md-8 online-course'>";
+var HTMLonlineTitle = "%data%";
+var HTMLonlineSchool = " - %data%";
 var HTMLonlineDates = "<div class='date-text'>%data%</div>";
-var HTMLonlineURL = "<br><a href='#'>%data%</a>";
+var HTMLonlineURL = "<a href='%data%'>%data%</a>";
 var HTMLonlineCertificate = "<a href='%data%'>Obtained certificate of accomplishment</a>";
 
 var internationalizeButton = "<button>Internationalize</button>";
