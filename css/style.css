@@ -178,6 +178,10 @@ span {
   top: 0px;
 }
 
+.project-image{
+
+}
+
 #letsConnect {
   text-align: center;
 }
@@ -226,5 +230,16 @@ span {
   #skillsH3,
   #skills {
     display: block;
+  }
+}
+
+@media print{
+  h1 {
+    font-size: 24px;
+    line-height: 10px;
+    display: block;
+  }
+  .project-image{
+      display: none;
   }
 }
