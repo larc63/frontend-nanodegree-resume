@@ -34,7 +34,8 @@ var data = {
                     "Worked in conjunction with the product managers and development leads to determine software requirements.",
                     "Worked in conjunction with the development team to refactor the usage of JNI, improving performance and memory usage.",
                     "Designed and implemented some of the infrastructure necessary to create new classroom activities using the Lua scripting language. The C counterpart for the Lua bindings, as well as the Lua engine itself gets cross-compiled to run on different platform including iOS, Nucleus and desktop operating systems."
-                ]
+                ],
+                "url": "http://education.ti.com"
             },
             {
                 "employer": "Digital Chocolate",
@@ -42,7 +43,8 @@ var data = {
                 "location": "Mexicali, B. C.",
                 "dates": "June 2009 - October 2010",
                 "description": "Coordinating project planning for various carriers in the US, working in conjunction with the sales and marketing teams to reduce production costs and improve revenue. Lead and mentor the engineering team, offering tutorials where needed. Ported a 3D game from the iPhone platform to Brew using OpenGL ES. Created client module for Qualcomm's Application Value Billing API in conjunction with the team in Bangalore, India. Aided the creation team to reduce the footprint for their project; done in j2me, targeting a device with strict hardware constraints.",
-                "roles": []
+                "roles": [],
+                "url": "http://en.wikipedia.org/wiki/Digital_Chocolate"
             },
             {
                 "employer": "LemonQuest",
@@ -53,7 +55,8 @@ var data = {
                 "roles": [
                     "Tool Programmer. Aided in the development of a stage editor for a game, done in Java. (April 2008 to May 2008)",
                     "Circulate and Circulate Prologue. Originally a PC based game; it was ported to the iPhone platform. With this game, as in previous products we attempted to use every user-friendly feature on the iPhone, including it's 3d sound capabilities and the accelerometer. This game earned a bronze medal from pocketgamer.co.uk."
-                ]
+                ],
+                "url": "http://www.ign.com/companies/lemonquest"
             },
             {
                 "employer": "Gameloft",
@@ -61,7 +64,8 @@ var data = {
                 "location": "Mexicali, Baja California, Mexico",
                 "dates": "August 2005 to March 2008",
                 "description": "Part of a team doing R&D for the iPhone OS, taking pieces of code from different platforms in order to exploit the full capabilities of the iPhone. This development team was the first to have a game ported on to the iPhone for the company, giving our local studio an edge against the other competing offices within the company.",
-                "roles": []
+                "roles": [],
+                "url": "http://www.gameloft.com"
             }
         ]
     },

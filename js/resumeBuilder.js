@@ -25,7 +25,7 @@ function ResumeBuilder(){
   this.displayWorkExperience = function(){
     for(var job in data.work.jobs){
       $("#workExperience").append(HTMLworkStart);
-      $(".work-entry:last").append(HTMLworkEmployer.replace("%data%", data.work.jobs[job].employer) + HTMLworkTitle.replace("%data%", data.work.jobs[job].title));
+      $(".work-entry:last").append(HTMLworkEmployer.replace("%data%", data.work.jobs[job].employer).replace("%url%", data.work.jobs[job].url) + HTMLworkTitle.replace("%data%", data.work.jobs[job].title));
       $(".work-entry:last").append(HTMLworkDates.replace("%data%", data.work.jobs[job].dates));
       $(".work-entry:last").append(HTMLworkLocation.replace("%data%", data.work.jobs[job].location));
       $(".work-entry:last").append(HTMLworkDescription.replace("%data%", data.work.jobs[job].description));
