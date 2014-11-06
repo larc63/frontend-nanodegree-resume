@@ -1,85 +1,59 @@
 <!DOCTYPE html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width">
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width'>
     <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-    <script src="js/jQuery.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
-    <script src="js/helper.js"></script>
+    <link rel='stylesheet' type='text/css' href='css/bootstrap.css'>
+    <link href='css/style.css' rel='stylesheet' type='text/css'>
+    <script src='js/jQuery.js'></script>
+    <script src='js/bootstrap.js'></script>
+    <script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?libraries=places'></script>
+    <script src='js/helper.js'></script>
     <title>Luis Antonio Rodríguez Condit</title>
 </head>
 
 <body>
-    <div id="letsConnect" class='col-md-2 fixed-div' data-spy="affix" data-offset-top="90">
+    <div id='letsConnect' class='col-md-2 fixed-div' data-spy='affix' data-offset-top='90'>
         <h2 class='orange center-text'>Contact</h2>
-        <ul id="footerContacts">
+        <ul id='footerContacts'>
         </ul>
     </div>
-    <div id="main" class="container">
-        <div class="row  dark-gray">
-            <div id="header" class="col-md-12">
-                <!-- <ul id="topContacts" class='flex-box'></ul> -->
+    <div id='main' class='container'>
+        <div class='row  dark-gray'>
+            <div id='header' class='col-md-12'>
+                <!-- <ul id='topContacts' class='flex-box'></ul> -->
             </div>
-            <div id="letsConnectInner" class='col-md-12'>
-                <ul id="footerContactsInner">
+            <div id='letsConnectInner' class='col-md-12'>
+                <ul id='footerContactsInner'>
                 </ul>
             </div>
         </div>
-        <div class="row  dark-gray">
-            <div id="skillsDiv" class="col-md-12">
-                <!-- <ul id="topContacts" class='flex-box'></ul> -->
+        <div class='row  dark-gray'>
+            <div id='skillsDiv' class='col-md-12'>
+                <!-- <ul id='topContacts' class='flex-box'></ul> -->
             </div>
         </div>
-        <div class="row">
+        <div class='row'>
             <div style='clear: both;'></div>
-            <div id="workExperience" class='gray'>
+            <div id='workExperience' class='gray'>
                 <h2>Work Experience</h2>
             </div>
         </div>
-        <div class="row">
-            <div id="projects" class="dark-gray">
+        <div class='row'>
+            <div id='projects' class='dark-gray'>
                 <h2>Projects</h2>
             </div>
         </div>
-        <div class="row">
-            <div id="education" class='gray'>
+        <div class='row'>
+            <div id='education' class='gray'>
                 <h2>Education</h2>
             </div>
         </div>
-        <div id="mapDiv" class="dark-gray">
+        <div id='mapDiv' class='dark-gray'>
             <h2>Where I've Lived and Worked</h2>
         </div>
     </div>
-    <script src="js/resumeData.js"></script>
-    <script src="js/resumeBuilder.js"></script>
-    <script type="text/javascript">
-        if (document.getElementsByClassName("flex-item").length === 0) {
-            document.getElementById("topContacts").style.display = "none";
-        }
-        if (document.getElementsByTagName("h1").length === 0) {
-            document.getElementById("header").style.display = "none";
-        }
-        if (document.getElementsByClassName("work-entry").length === 0) {
-            document.getElementById("workExperience").style.display = "none";
-        }
-        if (document.getElementsByClassName("project-entry").length === 0) {
-            document.getElementById("projects").style.display = "none";
-        }
-        if (document.getElementsByClassName("education-entry").length === 0) {
-            document.getElementById("education").style.display = "none";
-        }
-        if (document.getElementsByClassName("skills-entry").length === 0) {
-            document.getElementById("skillsChart").style.display = "none";
-        }
-        if (document.getElementsByClassName("flex-item").length === 0) {
-            document.getElementById("letsConnect").style.display = "none";
-        }
-        if (document.getElementById("map") == undefined) {
-            document.getElementById("mapDiv").style.display = "none";
-        }
-    </script>
+    <script src='js/resumeData.js'></script>
+    <script src='js/resumeBuilder.js'></script>
 </body>
