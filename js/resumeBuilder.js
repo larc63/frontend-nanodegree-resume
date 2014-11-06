@@ -1,4 +1,39 @@
+/*global $*/
+/*global data*/
+/*global googleMap*/
+/*global HTMLheaderRole*/
+/*global HTMLheaderName*/
+/*global HTMLskills*/
+/*global HTMLskillsStart*/
+/*global HTMLworkStart*/
+/*global HTMLworkEmployer*/
+/*global HTMLworkTitle*/
+/*global HTMLworkDates*/
+/*global HTMLworkLocation*/
+/*global HTMLworkDescription*/
+/*global HTMLprojectStart*/
+/*global HTMLprojectTitle*/
+/*global HTMLprojectDates*/
+/*global HTMLprojectDescription*/
+/*global HTMLprojectImage*/
+/*global HTMLcontactGeneric*/
+/*global HTMLschoolStart*/
+/*global HTMLschoolName*/
+/*global HTMLschoolDegree*/
+/*global HTMLschoolDates*/
+/*global HTMLschoolLocation*/
+/*global HTMLschoolMajor*/
+/*global HTMLonlineClasses*/
+/*global HTMLonlineStart*/
+/*global HTMLonlineTitle*/
+/*global HTMLonlineSchool*/
+/*global HTMLonlineURL*/
+/*global HTML*/
+/*global HTML*/
+
 function ResumeBuilder() {
+    "use strict";
+    var i, job;
     this.addAll = function () {
         this.displayBio();
         this.displayContacts();
@@ -12,7 +47,7 @@ function ResumeBuilder() {
 
     this.displaySkills = function () {
         $("#skillsDiv").append(HTMLskillsStart);
-        for (var i in data.bio.skills) {
+        for (i = 0; i < data.bio.skills.length; i += 1) {
             $("#skillsDiv").append(HTMLskills.replace("%data%", data.bio.skills[i]));
         }
     };
@@ -23,7 +58,7 @@ function ResumeBuilder() {
     };
 
     this.displayWorkExperience = function () {
-        for (var job in data.work.jobs) {
+        for (job = 0; job < data.work.jobs.length; job += 1) {
             $("#workExperience").append(HTMLworkStart);
             $(".work-entry:last").append(HTMLworkEmployer.replace("%data%", data.work.jobs[job].employer).replace("%url%", data.work.jobs[job].url) + HTMLworkTitle.replace("%data%", data.work.jobs[job].title));
             $(".work-entry:last").append(HTMLworkDates.replace("%data%", data.work.jobs[job].dates));
@@ -33,9 +68,10 @@ function ResumeBuilder() {
     };
 
     this.displayProjects = function () {
-        for (var p in data.projects.projects) {
+        var p, s;
+        for (p = 0; p < data.projects.projects.length; p += 1) {
             $("#projects").append(HTMLprojectStart);
-            var s = HTMLprojectTitle.replace("%data%", data.projects.projects[p].title);
+            s = HTMLprojectTitle.replace("%data%", data.projects.projects[p].title);
             s += HTMLprojectDates.replace("%data%", data.projects.projects[p].dates);
             s += HTMLprojectDescription.replace("%data%", data.projects.projects[p].description);
             $(".project-entry:last").append(s);
@@ -46,14 +82,16 @@ function ResumeBuilder() {
     };
 
     this.displayContacts = function () {
-        for (c in data.bio.contacts) {
+        var c;
+        for (c = 0; c < data.bio.contacts.length; c += 1) {
             $("#footerContacts").append(HTMLcontactGeneric.replace("%data%", data.bio.contacts[c]).replace("%contact%", c));
             $("#footerContactsInner").append(HTMLcontactGeneric.replace("%data%", data.bio.contacts[c]).replace("%contact%", c));
         }
     };
 
     this.displayEducation = function () {
-        for (var s in data.education.schools) {
+        var s, courseString;
+        for (s = 0; s < data.education.schools.length; s += 1) {
             $("#education").append(HTMLschoolStart);
             $(".education-entry:last").append(HTMLschoolName.replace("%data%", data.education.schools[s].name));
             $(".education-entry:last").append(HTMLschoolDegree.replace("%data%", data.education.schools[s].degree));
@@ -63,8 +101,8 @@ function ResumeBuilder() {
         }
         $("#education").append(HTMLonlineClasses);
         data.education.onlineCourses.reverse();
-        for (var s in data.education.onlineCourses) {
-            var courseString = HTMLonlineStart;
+        for (s = 0; s < data.education.onlineCourses.length; s += 1) {
+            courseString = HTMLonlineStart;
             courseString += HTMLonlineTitle.replace("%data%", data.education.onlineCourses[s].title);
             courseString += HTMLonlineSchool.replace("%data%", data.education.onlineCourses[s].school);
             courseString += HTMLonlineURL.replace("%data%", data.education.onlineCourses[s].url).replace("%data%", data.education.onlineCourses[s].url);
@@ -94,10 +132,10 @@ function ResumeBuilder() {
         if (document.getElementsByClassName('flex-item').length === 0) {
             document.getElementById('letsConnect').style.display = 'none';
         }
-        if (document.getElementById('map') == undefined) {
+        if (document.getElementById('map') === undefined) {
             document.getElementById('mapDiv').style.display = 'none';
         }
     };
-};
+}
 
 new ResumeBuilder().addAll();

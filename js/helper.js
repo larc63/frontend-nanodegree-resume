@@ -1,3 +1,6 @@
+/*global google*/
+/*global data*/
+
 var HTMLheaderName = "<h1 id='name'>%data%</h1>";
 var HTMLheaderRole = "<br><span>%data%</span>";
 
@@ -23,6 +26,7 @@ var HTMLprojectStart = "<div class='row project-entry'></div>";
 var HTMLprojectTitle = "<div class='col-md-8'><a href='#'>%data%</a>";
 var HTMLprojectDates = "<div class='date-text'>%data%</div>";
 var HTMLprojectDescription = "<p><br>%data%</p></div>";
+//TODO: Add alt text for images
 var HTMLprojectImage = "<div class='col-md-2 project-image'><img src='%data%' class='img-responsive'></div>";
 
 var HTMLschoolStart = "<div class='education-entry'></div>";
@@ -30,7 +34,7 @@ var HTMLschoolName = "<a href='#'>%data%";
 var HTMLschoolDegree = " -- %data%</a>";
 var HTMLschoolDates = "<div class='date-text'>%data%</div>";
 var HTMLschoolLocation = "<div class='location-text'>%data%</div>";
-var HTMLschoolMajor = "<em><br>Major: %data%</em>"
+var HTMLschoolMajor = "<em><br>Major: %data%</em>";
 
 var HTMLonlineClasses = "<h3>Online Classes</h3>";
 var HTMLonlineStart = "<div class='col-md-8 online-course'>";
@@ -51,15 +55,14 @@ https://developers.google.com/maps/documentation/javascript/reference
 var map; // declares a global map variable
 
 /**
-* initializeMap() is called when page is loaded.
-*/
+ * initializeMap() is called when page is loaded.
+ */
 function initializeMap() {
-
-    var locations;
-
-    var mapOptions = {
-        disableDefaultUI: true
-    };
+    "use strict";
+    var locations,
+        mapOptions = {
+            disableDefaultUI: true
+        };
 
     // This next line makes `map` a new Google Map JavaScript Object and attaches it to
     // <div id="map">, which is appended as part of an exercise late in the course.
@@ -71,22 +74,22 @@ function initializeMap() {
   written for bio, education, and work.
   */
     function locationFinder() {
-
-        // initializes an empty array
-        var locations = [];
+        var school, job,
+            // initializes an empty array
+            locations = [];
 
         // adds the single location property from bio to the locations array
         locations.push(data.bio.contacts.location);
 
         // iterates through school locations and appends each location to
         // the locations array
-        for (var school in data.education.schools) {
+        for (school = 0; school < data.education.schools.length; school += 1) {
             locations.push(data.education.schools[school].location);
         }
 
         // iterates through work locations and appends each location to
         // the locations array
-        for (var job in data.work.jobs) {
+        for (job = 0; job < data.work.jobs.length; job += 1) {
             locations.push(data.work.jobs[job].location);
         }
 
@@ -101,28 +104,26 @@ function initializeMap() {
     function createMapMarker(placeData) {
 
         // The next lines save location data from the search result object to local variables
-        var lat = placeData.geometry.location.k; // latitude from the place service
-        var lon = placeData.geometry.location.B; // longitude from the place service
-        var name = placeData.formatted_address; // name of the place from the place service
-        var bounds = window.mapBounds; // current boundaries of the map window
+        var lat = placeData.geometry.location.k, // latitude from the place service
+            lon = placeData.geometry.location.B, // longitude from the place service
+            name = placeData.formatted_address, // name of the place from the place service
+            bounds = window.mapBounds, // current boundaries of the map window
 
-        // marker is an object with additional data about the pin for a single location
-        var marker = new google.maps.Marker({
-            map: map,
-            position: placeData.geometry.location,
-            title: name
-        });
+            // marker is an object with additional data about the pin for a single location
+            marker = new google.maps.Marker({
+                map: map,
+                position: placeData.geometry.location,
+                title: name
+            }),
 
-        var contentString = '<div id="bodyContent">' +
-            '<p>' + name +
-            '</div>';
+            contentString = '<div id="bodyContent">' + '<p>' + name + '</div>',
 
-        // infoWindows are the little helper windows that open when you click
-        // or hover over a pin on a map. They usually contain more information
-        // about a location.
-        var infoWindow = new google.maps.InfoWindow({
-            content: contentString
-        });
+            // infoWindows are the little helper windows that open when you click
+            // or hover over a pin on a map. They usually contain more information
+            // about a location.
+            infoWindow = new google.maps.InfoWindow({
+                content: contentString
+            });
 
         // hmmmm, I wonder what this is about...
         google.maps.event.addListener(marker, 'click', function () {
@@ -144,8 +145,8 @@ function initializeMap() {
   If so, it creates a new map marker for that location.
   */
     function callback(results, status) {
-        if (status == google.maps.places.PlacesServiceStatus.OK) {
-            createMapMarker(results[0])
+        if (status === google.maps.places.PlacesServiceStatus.OK) {
+            createMapMarker(results[0]);
         }
     }
 
@@ -157,15 +158,17 @@ function initializeMap() {
 
         // creates a Google place search service object. PlacesService does the work of
         // actually searching for location data.
-        var service = new google.maps.places.PlacesService(map);
+        var service = new google.maps.places.PlacesService(map),
+            place,
+            request;
 
         // Iterates through the array of locations, creates a search object for each location
-        for (place in locations) {
+        for (place = 0; place < locations.length; place += 1) {
 
             // the search request object
-            var request = {
+            request = {
                 query: locations[place]
-            }
+            };
 
             // Actually searches the Google Maps API for location data and runs the callback
             // function with the search results after each search.
@@ -183,7 +186,7 @@ function initializeMap() {
     // the locations array
     pinPoster(locations);
 
-};
+}
 
 /*
 Uncomment all the code below when you're ready to implement a Google Map!
