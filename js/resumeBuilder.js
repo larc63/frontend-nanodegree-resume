@@ -83,9 +83,11 @@ function ResumeBuilder() {
 
     this.displayContacts = function () {
         var c;
-        for (c = 0; c < data.bio.contacts.length; c += 1) {
-            $("#footerContacts").append(HTMLcontactGeneric.replace("%data%", data.bio.contacts[c]).replace("%contact%", c));
-            $("#footerContactsInner").append(HTMLcontactGeneric.replace("%data%", data.bio.contacts[c]).replace("%contact%", c));
+        for (c in data.bio.contacts) {
+            if (data.bio.contacts.hasOwnProperty(c)) {
+                $("#footerContacts").append(HTMLcontactGeneric.replace("%data%", data.bio.contacts[c]).replace("%contact%", c));
+                $("#footerContactsInner").append(HTMLcontactGeneric.replace("%data%", data.bio.contacts[c]).replace("%contact%", c));
+            }
         }
     };
 
