@@ -128,9 +128,6 @@ function ResumeBuilder() {
         if (document.getElementsByClassName('education-entry').length === 0) {
             document.getElementById('education').style.display = 'none';
         }
-        if (document.getElementsByClassName('skills-entry').length === 0) {
-            document.getElementById('skillsChart').style.display = 'none';
-        }
         if (document.getElementsByClassName('flex-item').length === 0) {
             document.getElementById('letsConnect').style.display = 'none';
         }
