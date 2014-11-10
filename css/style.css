@@ -116,7 +116,8 @@ span {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 10px;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
 }
 .center-content {
     padding: 5%;
@@ -155,6 +156,8 @@ span {
 .skills-title {
     color: #2760CB;
     display: none;
+    padding: 0 0 10px 10px;
+    margin: 10px 0 0 0;
 }
 @media only screen and (max-width: 1770px) {
     .lets-connect {
