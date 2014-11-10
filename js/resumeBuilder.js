@@ -131,7 +131,7 @@ function ResumeBuilder() {
         if (document.getElementsByClassName('flex-item').length === 0) {
             document.getElementById('letsConnect').style.display = 'none';
         }
-        if (document.getElementById('map') === undefined) {
+        if (document.getElementById('google-map') === undefined) {
             document.getElementById('mapDiv').style.display = 'none';
         }
     };

@@ -135,7 +135,7 @@ span {
 .project-image {
     display: block;
 }
-#letsConnect {
+.lets-connect {
     text-align: center;
 }
 .header {
@@ -160,27 +160,27 @@ span {
     display: none;
 }
 @media only screen and (max-width: 1770px) {
-    #letsConnect {
+    .lets-connect {
         display: none;
     }
-    #letsConnectInner {
+    .lets-connect-inner {
         display: block;
     }
 }
 @media only screen and (min-width: 1770px) {
-    #letsConnect {
+    .lets-connect {
         display: block;
     }
-    #letsConnectInner {
+    .lets-connect-inner {
         display: none;
     }
 }
 @media only print and (max-width: 1770px) {
-    #letsConnect,
+    .lets-connect,
     .google-map-div {
         display: none;
     }
-    #letsConnectInner {
+    .lets-connect-inner {
         display: block;
     }
 }
