@@ -12,7 +12,7 @@ var HTMLgithub = "<li class='flex-item'><span class='green-text'>github</span><s
 var HTMLblog = "<li class='flex-item'><span class='green-text'>blog</span><span class='green-text'>%data%</span></li>";
 var HTMLlocation = "<li class='flex-item'><span class='green-text'>location</span><span class='green-text'>%data%</span></li>";
 
-var HTMLskillsStart = "<h3 id='skillsH3'>Skills at a Glance:</h3><ul id='skills' class='flex-box'></ul>";
+var HTMLskillsStart = "<h3 id='skillsH3' class='skills-title'>Skills at a Glance:</h3><ul id='skills' class='flex-box'></ul>";
 var HTMLskills = "<li class='flex-item'><span class='green-text'>%data%</span></li>";
 
 var HTMLworkStart = "<div class='work-entry'></div>";

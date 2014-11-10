@@ -152,11 +152,8 @@ span {
     width: 100%;
     padding-bottom: 5%;
 }
-#skillsH3 {
+.skills-title {
     color: #2760CB;
-    display: none;
-}
-#skills {
     display: none;
 }
 @media only screen and (max-width: 1770px) {
@@ -185,8 +182,7 @@ span {
     }
 }
 @media only screen and (min-width: 750px) {
-    #skillsH3,
-    #skills {
+    .skills-title {
         display: block;
     }
 }
