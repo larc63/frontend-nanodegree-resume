@@ -104,7 +104,7 @@ var data = {
     "education": {
         "schools": [
             {
-                "name": "Centro de Investigacion Cientifica y Educacion Superior de Ensenada",
+                "name": "Centro de Investigación Científica y Educacion Superior de Ensenada",
                 "location": "Ensenada, B. C., Mexico",
                 "degree": "Master's",
                 "majors": [
@@ -114,7 +114,7 @@ var data = {
                 "url": "http://www.cicese.edu.mx/"
             },
             {
-                "name": "Instituto Tecnologico y de Estudios Superiores de Monterrey ",
+                "name": "Instituto Tecnológico y de Estudios Superiores de Monterrey ",
                 "location": "Monterrey, N. L.",
                 "degree": "Bachelor's",
                 "majors": [
@@ -142,7 +142,7 @@ var data = {
                 "school": "Udacity",
                 "dates": "2014",
                 "url": "https://www.udacity.com/course/cs255",
-                "certificate" : "res/CS255.pdf"
+                "certificate": "res/CS255.pdf"
             },
             {
                 "title": "jQuery",
@@ -161,28 +161,28 @@ var data = {
                 "school": "Udacity",
                 "dates": "2012",
                 "url": "https://www.udacity.com/course/cs258",
-                "certificate" : "res/CS258.pdf"
+                "certificate": "res/CS258.pdf"
             },
             {
                 "title": "Web Application Engineering",
                 "school": "Udacity",
                 "dates": "2012",
                 "url": "https://www.udacity.com/course/cs253",
-                "certificate" : "res/CS253.pdf"
+                "certificate": "res/CS253.pdf"
             },
             {
                 "title": "Artificial Intellingence for Robotics",
                 "school": "Udacity",
                 "dates": "2012",
                 "url": "https://www.udacity.com/course/cs373",
-                "certificate" : "res/CS373.pdf"
+                "certificate": "res/CS373.pdf"
             },
             {
                 "title": "Introduction to Artificial Intelligence",
                 "school": "Udacity",
                 "dates": "2011",
                 "url": "http://www.ai-class.com",
-                "certificate" : "res/AI_letter_signed.pdf"
+                "certificate": "res/AI_letter_signed.pdf"
             }
         ]
     }
