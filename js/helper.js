@@ -45,7 +45,7 @@ var HTMLonlineURL = "<a href='%data%'>%data%</a>";
 var HTMLonlineCertificate = "<a href='%data%'>Obtained certificate of accomplishment</a>";
 
 var internationalizeButton = "<button>Internationalize</button>";
-var googleMap = "<div id='map'></div>";
+var googleMap = "<div id='google-map' class='google-map'></div>";
 
 /**
 Generate the custom Google Map for the website.
@@ -66,7 +66,7 @@ function initializeMap() {
 
     // This next line makes `map` a new Google Map JavaScript Object and attaches it to
     // <div id="map">, which is appended as part of an exercise late in the course.
-    map = new google.maps.Map(document.querySelector('#map'), mapOptions);
+    map = new google.maps.Map(document.querySelector('#google-map'), mapOptions);
 
 
     /*

@@ -132,19 +132,22 @@ span {
     left: 0px;
     top: 0px;
 }
-.project-image {} #letsConnect {
+.project-image {
+    display: block;
+}
+#letsConnect {
     text-align: center;
 }
 .header {
     background-color: #BFC5C6;
 }
-#map {
+.google-map {
     display: block;
     height: 100%;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
 }
-#mapDiv {
+.google-map-div {
     height: 400px;
     width: 100%;
     padding-bottom: 5%;
@@ -174,7 +177,7 @@ span {
 }
 @media only print and (max-width: 1770px) {
     #letsConnect,
-    #mapDiv {
+    .google-map-div {
         display: none;
     }
     #letsConnectInner {
