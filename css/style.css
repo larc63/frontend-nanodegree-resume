@@ -3,18 +3,22 @@
     margin: 0;
     font-family: 'Oxygen', sans-serif;
 }
+
 img {
     padding: 10px;
 }
+
 hr {
     color: #404E41;
 }
+
 h1 {
     font-size: 50px;
     color: #2760CB;
     line-height: 48px;
     display: inline;
 }
+
 h2 {
     font-style: bold;
     font-size: 24px;
@@ -22,18 +26,21 @@ h2 {
     line-height: 29px;
     padding: 10px;
 }
+
 h3 {
     font-style: italic;
     font-size: 20px;
     color: #000000;
     line-height: 22px;
 }
+
 h4 {
     font-style: bold;
     font-size: 14px;
     color: #4A4A4A;
     line-height: 17px;
 }
+
 h2,
 h3,
 h4,
@@ -42,24 +49,29 @@ h5 {
     padding-left: 5%;
     padding-right: 5%;
 }
+
 ul {
     list-style-type: none;
 }
+
 p {
     font-size: 14px;
     color: #333333;
     line-height: 21px;
 }
+
 a {
     color: #2760CB;
     text-decoration: none;
     margin-top: 10px;
     display: block;
 }
+
 span {
     padding: 5px;
     color: #404E41;
 }
+
 .education-entry,
 .work-entry,
 .project-entry,
@@ -67,6 +79,7 @@ span {
     padding-left: 5%;
     padding-right: 5%;
 }
+
 .education-entry,
 .work-entry,
 .online-course {
@@ -74,6 +87,7 @@ span {
     border-bottom-style: solid;
     border-bottom-width: 1px;
 }
+
 .date-text {
     font-style: italic;
     font-size: 14px;
@@ -81,6 +95,7 @@ span {
     line-height: 20px;
     float: left;
 }
+
 .location-text {
     font-style: italic;
     font-size: 14px;
@@ -88,28 +103,35 @@ span {
     line-height: 16px;
     float: right;
 }
+
 .green {
     background-color: #93977C;
 }
+
 .green-text {
     color: #2760CB;
 }
+
 .white-text {
     font-weight: bold;
     color: #FFFFFF;
 }
+
 .green-text {
     font-weight: bold;
     color: #404E41;
 }
+
 .gray {
     background-color: #FFF;
     padding-bottom: 10px;
     clear: both;
 }
+
 .dark-gray {
     background-color: #BFC5C6;
 }
+
 .flex-box {
     display: -webkit-flex;
     display: flex;
@@ -119,9 +141,11 @@ span {
     padding: 0 0 0 0;
     margin: 0 0 0 0;
 }
+
 .center-content {
     padding: 5%;
 }
+
 .fixed-div {
     border-color: #BFC5C6;
     border-style: solid;
@@ -133,79 +157,96 @@ span {
     left: 0px;
     top: 0px;
 }
+
 .project-image {
     display: block;
 }
+
 .lets-connect {
     text-align: center;
 }
+
 .header {
     background-color: #BFC5C6;
 }
+
 .google-map {
     display: block;
     height: 100%;
     margin-left: 2.5%;
     margin-right: 2.5%;
 }
+
 .google-map-div {
     height: 400px;
     width: 100%;
     padding-bottom: 5%;
 }
+
 .skills-title {
     color: #2760CB;
     display: none;
     padding: 0 0 10px 10px;
     margin: 10px 0 0 0;
 }
+
 @media only screen and (max-width: 1770px) {
     .lets-connect {
         display: none;
     }
+
     .lets-connect-inner {
         display: block;
-    }
+    };
 }
+
 @media only screen and (min-width: 1770px) {
     .lets-connect {
         display: block;
     }
+
     .lets-connect-inner {
         display: none;
-    }
+    };
 }
+
 @media only print and (max-width: 1770px) {
     .lets-connect,
     .google-map-div {
         display: none;
     }
+
     .lets-connect-inner {
         display: block;
-    }
+    };
 }
+
 @media only screen and (min-width: 750px) {
     .skills-title {
         display: block;
-    }
+    };
 }
+
 @media print {
     h1 {
         font-size: 24px;
         line-height: 5px;
         display: block;
     }
+
     h2 {
         font-size: 18px;
         line-height: 3px;
         display: block;
     }
+
     .project-image {
         display: none;
     }
+
     .education-entry,
     .work-entry,
     .online-course {
         border-bottom-width: 0px;
-    }
+    };
 }
