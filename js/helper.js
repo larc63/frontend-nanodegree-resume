@@ -79,18 +79,18 @@ function initializeMap() {
             locations = [];
 
         // adds the single location property from bio to the locations array
-        locations.push(data.bio.contacts.location);
+        locations.push(bio.contacts.location);
 
         // iterates through school locations and appends each location to
         // the locations array
-        for (school = 0; school < data.education.schools.length; school += 1) {
-            locations.push(data.education.schools[school].location);
+        for (school = 0; school < education.schools.length; school += 1) {
+            locations.push(education.schools[school].location);
         }
 
         // iterates through work locations and appends each location to
         // the locations array
-        for (job = 0; job < data.work.jobs.length; job += 1) {
-            locations.push(data.work.jobs[job].location);
+        for (job = 0; job < work.jobs.length; job += 1) {
+            locations.push(work.jobs[job].location);
         }
 
         return locations;
