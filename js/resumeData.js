@@ -1,75 +1,23 @@
-/*global $*/
-/*global HTMLheaderRole*/
-/*global HTMLheaderName*/
-/*global HTMLskills*/
-/*global HTMLskillsStart*/
-/*global HTMLworkStart*/
-/*global HTMLworkEmployer*/
-/*global HTMLworkTitle*/
-/*global HTMLworkDates*/
-/*global HTMLworkLocation*/
-/*global HTMLworkDescription*/
-/*global HTMLprojectStart*/
-/*global HTMLprojectTitle*/
-/*global HTMLprojectDates*/
-/*global HTMLprojectDescription*/
-/*global HTMLprojectImage*/
-/*global HTMLcontactGeneric*/
-/*global HTMLschoolStart*/
-/*global HTMLschoolName*/
-/*global HTMLschoolDegree*/
-/*global HTMLschoolDates*/
-/*global HTMLschoolLocation*/
-/*global HTMLschoolMajor*/
-/*global HTMLonlineClasses*/
-/*global HTMLonlineStart*/
-/*global HTMLonlineTitle*/
-/*global HTMLonlineSchool*/
-/*global HTMLonlineURL*/
-var bio = {
-    "name": "Luis A. Rodriguez",
-    "role": "Senior Software Developer",
-    "welcomeMessage": "Hello!",
-    "skills": [
+var data = {
+    bio: {
+        "name": "Luis A. Rodriguez",
+        "role": "Senior Software Developer",
+        "skills": [
         "Java",
         "C/C++/Objective-C",
         "Mobile Platforms: iOS, Android (NDK, AOSP), J2ME",
         "HTML, CSS, JavaScript",
         "Glue: Java Native Interface, Lua glue, JSObject"
     ],
-    "contacts": {
-        "mobile": "+1 972-850-6310",
-        "email": "larc63@gmail.com",
-        "twitter": "@larc63",
-        "github": "larc63",
-        "location": "Dallas, TX"
+        "contacts": {
+            "mobile": "+1 972-850-6310",
+            "email": "larc63@gmail.com",
+            "twitter": "@larc63",
+            "github": "larc63",
+            "location": "Dallas, TX"
+        },
     },
-    "displayBio": function () {
-        "use strict";
-        $("#header").prepend(HTMLheaderRole.replace("%data%", this.role));
-        $("#header").prepend(HTMLheaderName.replace("%data%", this.name));
-    },
-    "displayContacts": function () {
-        "use strict";
-        var c;
-        for (c in this.contacts) {
-            if (this.contacts.hasOwnProperty(c)) {
-                $("#footerContacts").append(HTMLcontactGeneric.replace("%data%", this.contacts[c]).replace("%contact%", c));
-                $("#footerContactsInner").append(HTMLcontactGeneric.replace("%data%", this.contacts[c]).replace("%contact%", c));
-            }
-        }
-    },
-    "displaySkills": function () {
-        "use strict";
-        var i;
-        $("#skillsDiv").append(HTMLskillsStart);
-        for (i = 0; i < this.skills.length; i += 1) {
-            $("#skillsDiv").append(HTMLskills.replace("%data%", this.skills[i]));
-        }
-    }
-};
-
-var work = {
+    work: {
     "jobs": [
         {
             "employer": "Texas Instruments",
@@ -131,157 +79,160 @@ var work = {
         }
     }
 };
-
-var projects = {
-    "projects": [
-        {
-            "title": "Chinese Characters",
-            "location": "Mexicali, Baja California, Mexico",
-            "dates": "2009",
-            "description": "Chinese character writing tutor for the iPhone",
-            "images": [
-                "images/ChineseCharacters/thumb.jpeg",
-                "images/ChineseCharacters/01.jpeg",
-                "images/ChineseCharacters/02.jpeg",
-                "images/ChineseCharacters/03.jpeg",
-                "images/ChineseCharacters/04.jpeg",
-                "images/ChineseCharacters/05.jpeg"
-            ]
-        },
-        {
-            "title": "Big 2 Poker",
-            "location": "Mexicali, Baja California, Mexico",
-            "dates": "2010",
-            "description": "Card game for the iPhone and made all graphics.",
-            "images": [
-                "images/Big2Poker/thumb.jpeg",
-                "images/Big2Poker/01.jpeg",
-                "images/Big2Poker/02.jpeg",
-                "images/Big2Poker/03.jpeg",
-                "images/Big2Poker/04.jpeg",
-                "images/Big2Poker/05.jpeg"
-            ]
-        }
-    ],
-    "displayProjects": function () {
-        "use strict";
-        var p, s;
-        for (p = 0; p < this.projects.length; p += 1) {
-            $("#projects").append(HTMLprojectStart);
-            s = HTMLprojectTitle.replace("%data%", this.projects[p].title);
-            s += HTMLprojectDates.replace("%data%", this.projects[p].dates);
-            s += HTMLprojectDescription.replace("%data%", this.projects[p].description);
-            $(".project-entry:last").append(s);
-            if (typeof this.projects[p].images[0] === "string") {
-                $(".project-entry:last").append(HTMLprojectImage.replace("%data%", this.projects[p].images[0]));
-            }
-        }
-    }
 };
 
-var education = {
-    "schools": [
-        {
-            "name": "Centro de Investigación Científica y Educacion Superior de Ensenada",
-            "location": "Ensenada, B. C., Mexico",
-            "degree": "Master's",
-            "majors": [
-                "Electronics and Telecommunications"
-            ],
-            "dates": "2002 - 2005",
-            "url": "http://www.cicese.edu.mx/"
-        },
-        {
-            "name": "Instituto Tecnológico y de Estudios Superiores de Monterrey ",
-            "location": "Monterrey, N. L.",
-            "degree": "Bachelor's",
-            "majors": [
-                "Electronics Systems Engineering"
-            ],
-            "dates": "1997-2001",
-            "url": "http://www.itesm.mx/"
-        }
-    ],
-    "onlineCourses": [
-        {
-            "title": "Javascript Basics",
-            "school": "Udacity",
-            "dates": "2014",
-            "url": "https://www.udacity.com/course/ud804"
-        },
-        {
-            "title": "Intro to HTML and CSS",
-            "school": "Udacity",
-            "dates": "2014",
-            "url": "https://www.udacity.com/course/ud304"
-        },
-        {
-            "title": "HTML5 Game Development",
-            "school": "Udacity",
-            "dates": "2014",
-            "url": "https://www.udacity.com/course/cs255",
-            "certificate": "res/CS255.pdf"
-        },
-        {
-            "title": "jQuery",
-            "school": "Codecademy",
-            "dates": "2013",
-            "url": "http://www.codecademy.com/tracks/jquery"
-        },
-        {
-            "title": "JavaScript",
-            "school": "Codecademy",
-            "dates": "2013",
-            "url": "http://www.codecademy.com/tracks/javascript"
-        },
-        {
-            "title": "Software Testing",
-            "school": "Udacity",
-            "dates": "2012",
-            "url": "https://www.udacity.com/course/cs258",
-            "certificate": "res/CS258.pdf"
-        },
-        {
-            "title": "Web Application Engineering",
-            "school": "Udacity",
-            "dates": "2012",
-            "url": "https://www.udacity.com/course/cs253",
-            "certificate": "res/CS253.pdf"
-        },
-        {
-            "title": "Artificial Intellingence for Robotics",
-            "school": "Udacity",
-            "dates": "2012",
-            "url": "https://www.udacity.com/course/cs373",
-            "certificate": "res/CS373.pdf"
-        },
-        {
-            "title": "Introduction to Artificial Intelligence",
-            "school": "Udacity",
-            "dates": "2011",
-            "url": "http://www.ai-class.com",
-            "certificate": "res/AI_letter_signed.pdf"
-        }
-    ],
-    "displayEducation": function () {
-        "use strict";
-        var s, courseString;
-        for (s = 0; s < this.schools.length; s += 1) {
-            $("#education").append(HTMLschoolStart);
-            $(".education-entry:last").append(HTMLschoolName.replace("%data%", this.schools[s].name));
-            $(".education-entry:last").append(HTMLschoolDegree.replace("%data%", this.schools[s].degree));
-            $(".education-entry:last").append(HTMLschoolDates.replace("%data%", this.schools[s].dates));
-            $(".education-entry:last").append(HTMLschoolLocation.replace("%data%", this.schools[s].location));
-            $(".education-entry:last").append(HTMLschoolMajor.replace("%data%", this.schools[s].majors[0]));
-        }
-        $("#education").append(HTMLonlineClasses);
-        this.onlineCourses.reverse();
-        for (s = 0; s < this.onlineCourses.length; s += 1) {
-            courseString = HTMLonlineStart;
-            courseString += HTMLonlineTitle.replace("%data%", this.onlineCourses[s].title);
-            courseString += HTMLonlineSchool.replace("%data%", this.onlineCourses[s].school);
-            courseString += HTMLonlineURL.replace("%data%", this.onlineCourses[s].url).replace("%data%", this.onlineCourses[s].url);
-            $("#education").after(courseString);
-        }
-    }
-};
+var 
+//
+//var projects = {
+//    "projects": [
+//        {
+//            "title": "Chinese Characters",
+//            "location": "Mexicali, Baja California, Mexico",
+//            "dates": "2009",
+//            "description": "Chinese character writing tutor for the iPhone",
+//            "images": [
+//                "images/ChineseCharacters/thumb.jpeg",
+//                "images/ChineseCharacters/01.jpeg",
+//                "images/ChineseCharacters/02.jpeg",
+//                "images/ChineseCharacters/03.jpeg",
+//                "images/ChineseCharacters/04.jpeg",
+//                "images/ChineseCharacters/05.jpeg"
+//            ]
+//        },
+//        {
+//            "title": "Big 2 Poker",
+//            "location": "Mexicali, Baja California, Mexico",
+//            "dates": "2010",
+//            "description": "Card game for the iPhone and made all graphics.",
+//            "images": [
+//                "images/Big2Poker/thumb.jpeg",
+//                "images/Big2Poker/01.jpeg",
+//                "images/Big2Poker/02.jpeg",
+//                "images/Big2Poker/03.jpeg",
+//                "images/Big2Poker/04.jpeg",
+//                "images/Big2Poker/05.jpeg"
+//            ]
+//        }
+//    ],
+//    "displayProjects": function () {
+//        "use strict";
+//        var p, s;
+//        for (p = 0; p < this.projects.length; p += 1) {
+//            $("#projects").append(HTMLprojectStart);
+//            s = HTMLprojectTitle.replace("%data%", this.projects[p].title);
+//            s += HTMLprojectDates.replace("%data%", this.projects[p].dates);
+//            s += HTMLprojectDescription.replace("%data%", this.projects[p].description);
+//            $(".project-entry:last").append(s);
+//            if (typeof this.projects[p].images[0] === "string") {
+//                $(".project-entry:last").append(HTMLprojectImage.replace("%data%", this.projects[p].images[0]));
+//            }
+//        }
+//    }
+//};
+//
+//var education = {
+//    "schools": [
+//        {
+//            "name": "Centro de Investigación Científica y Educacion Superior de Ensenada",
+//            "location": "Ensenada, B. C., Mexico",
+//            "degree": "Master's",
+//            "majors": [
+//                "Electronics and Telecommunications"
+//            ],
+//            "dates": "2002 - 2005",
+//            "url": "http://www.cicese.edu.mx/"
+//        },
+//        {
+//            "name": "Instituto Tecnológico y de Estudios Superiores de Monterrey ",
+//            "location": "Monterrey, N. L.",
+//            "degree": "Bachelor's",
+//            "majors": [
+//                "Electronics Systems Engineering"
+//            ],
+//            "dates": "1997-2001",
+//            "url": "http://www.itesm.mx/"
+//        }
+//    ],
+//    "onlineCourses": [
+//        {
+//            "title": "Javascript Basics",
+//            "school": "Udacity",
+//            "dates": "2014",
+//            "url": "https://www.udacity.com/course/ud804"
+//        },
+//        {
+//            "title": "Intro to HTML and CSS",
+//            "school": "Udacity",
+//            "dates": "2014",
+//            "url": "https://www.udacity.com/course/ud304"
+//        },
+//        {
+//            "title": "HTML5 Game Development",
+//            "school": "Udacity",
+//            "dates": "2014",
+//            "url": "https://www.udacity.com/course/cs255",
+//            "certificate": "res/CS255.pdf"
+//        },
+//        {
+//            "title": "jQuery",
+//            "school": "Codecademy",
+//            "dates": "2013",
+//            "url": "http://www.codecademy.com/tracks/jquery"
+//        },
+//        {
+//            "title": "JavaScript",
+//            "school": "Codecademy",
+//            "dates": "2013",
+//            "url": "http://www.codecademy.com/tracks/javascript"
+//        },
+//        {
+//            "title": "Software Testing",
+//            "school": "Udacity",
+//            "dates": "2012",
+//            "url": "https://www.udacity.com/course/cs258",
+//            "certificate": "res/CS258.pdf"
+//        },
+//        {
+//            "title": "Web Application Engineering",
+//            "school": "Udacity",
+//            "dates": "2012",
+//            "url": "https://www.udacity.com/course/cs253",
+//            "certificate": "res/CS253.pdf"
+//        },
+//        {
+//            "title": "Artificial Intellingence for Robotics",
+//            "school": "Udacity",
+//            "dates": "2012",
+//            "url": "https://www.udacity.com/course/cs373",
+//            "certificate": "res/CS373.pdf"
+//        },
+//        {
+//            "title": "Introduction to Artificial Intelligence",
+//            "school": "Udacity",
+//            "dates": "2011",
+//            "url": "http://www.ai-class.com",
+//            "certificate": "res/AI_letter_signed.pdf"
+//        }
+//    ],
+//    "displayEducation": function () {
+//        "use strict";
+//        var s, courseString;
+//        for (s = 0; s < this.schools.length; s += 1) {
+//            $("#education").append(HTMLschoolStart);
+//            $(".education-entry:last").append(HTMLschoolName.replace("%data%", this.schools[s].name));
+//            $(".education-entry:last").append(HTMLschoolDegree.replace("%data%", this.schools[s].degree));
+//            $(".education-entry:last").append(HTMLschoolDates.replace("%data%", this.schools[s].dates));
+//            $(".education-entry:last").append(HTMLschoolLocation.replace("%data%", this.schools[s].location));
+//            $(".education-entry:last").append(HTMLschoolMajor.replace("%data%", this.schools[s].majors[0]));
+//        }
+//        $("#education").append(HTMLonlineClasses);
+//        this.onlineCourses.reverse();
+//        for (s = 0; s < this.onlineCourses.length; s += 1) {
+//            courseString = HTMLonlineStart;
+//            courseString += HTMLonlineTitle.replace("%data%", this.onlineCourses[s].title);
+//            courseString += HTMLonlineSchool.replace("%data%", this.onlineCourses[s].school);
+//            courseString += HTMLonlineURL.replace("%data%", this.onlineCourses[s].url).replace("%data%", this.onlineCourses[s].url);
+//            $("#education").after(courseString);
+//        }
+//    }
+//};

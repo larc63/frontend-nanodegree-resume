@@ -3,53 +3,50 @@
 <head>
     <meta charset='utf-8' />
     <meta name='viewport' content='width=device-width'>
-    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel='stylesheet' type='text/css' href='css/bootstrap.css'>
+    <script src='js/knockout-3.0.0.js'></script>
     <link href='css/style.css' rel='stylesheet' type='text/css'>
-    <script src='js/jQuery.js'></script>
-    <script src='js/bootstrap.js'></script>
-    <script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?libraries=places'></script>
-    <script src='js/helper.js'></script>
     <title>Luis Antonio Rodríguez Condit</title>
 </head>
 
 <body>
-    <div id='letsConnect' class='col-md-2 fixed-div lets-connect' data-spy='affix' data-offset-top='90'>
-        <h2 class='green center-text'>Contact</h2>
-        <ul id='footerContacts'>
-        </ul>
-    </div>
     <div id='main' class='container'>
-        <div class='row  dark-gray'>
-            <div id='header' class='col-md-12 header'>
-            </div>
-            <div id='letsConnectInner' class='col-md-12 lets-connect-inner'>
-                <ul id='footerContactsInner'>
-                </ul>
-            </div>
+
+        <div class='col-md-12'>
+            <h1 data-bind='text: name'></h1>
+            <p data-bind='text: role'></p>
         </div>
-        <div class='row  dark-gray'>
-            <div id='skillsDiv' class='col-md-12'>
-            </div>
+        <div class='col-md-12'>
+            <h2>Skills</h2>
+            <table data-bind='foreach: rows' class='col-md-12, skills'>
+                <tr data-bind='foreach: $data'>
+                    <td data-bind='text: skill'></td>
+                </tr>
+            </table>
         </div>
-        <div class='row'>
-            <div style='clear: both;'></div>
-            <div id='workExperience' class='gray'>
-                <h2>Work Experience</h2>
-            </div>
+        <div class='col-md-12'>
+            <h2>Skills</h2>
+            <table data-bind='foreach: rows' class='col-md-12, skills'>
+                <tr data-bind='foreach: $data'>
+                    <td data-bind='text: skill'></td>
+                </tr>
+            </table>
         </div>
-        <div class='row'>
-            <div id='projects' class='dark-gray'>
-                <h2>Projects</h2>
-            </div>
+        <div class='col-md-12'>
+            Bacon ipsum dolor amet bresaola tongue kielbasa chuck boudin sirloin alcatra shank. Porchetta ham hock biltong, spare ribs pig pork belly pork loin filet mignon salami ball tip kevin shank flank. Corned beef meatloaf hamburger, bacon turkey short loin venison meatball pancetta spare ribs sausage. Tenderloin hamburger tail pastrami sausage spare ribs, chuck chicken meatloaf strip steak. Jowl biltong short ribs meatloaf bacon shankle tenderloin, swine pastrami frankfurter strip steak. Beef ribs pork loin t-bone cupim spare ribs. Tongue biltong kevin turkey leberkas pig doner pork chop.
         </div>
-        <div class='row'>
-            <div id='education' class='gray'>
-                <h2>Education</h2>
-            </div>
+        <div class='col-md-12'>
+            Tongue venison short ribs brisket cow. T-bone bacon venison turkey meatball sirloin turducken pig hamburger kielbasa. Jerky bacon pig fatback frankfurter. Short ribs pork loin pancetta frankfurter beef ribs shank drumstick capicola ham hock meatball cupim pig biltong beef.
         </div>
-        <div id='mapDiv' class='dark-gray google-map-div'>
-            <h2>Where I've Lived and Worked</h2>
+        <div class='col-md-12'>
+            Porchetta pancetta jerky sausage, pork chop pig venison. Tenderloin tongue meatball prosciutto, ham hock cupim pork loin t-bone pork belly venison brisket. Leberkas rump tri-tip kielbasa prosciutto. Filet mignon corned beef pastrami, t-bone ham hock spare ribs ball tip brisket tri-tip venison pork loin.
+        </div>
+        <div class='col-md-12'>
+            Andouille pork loin picanha ball tip shank frankfurter flank meatloaf ground round cupim sausage capicola biltong fatback venison. Turkey pork brisket leberkas jerky, short loin tri-tip. Spare ribs ham prosciutto, beef ribs cupim boudin ground round meatball beef porchetta sirloin chicken brisket cow alcatra. Filet mignon pancetta turkey strip steak rump. Drumstick sirloin chicken tri-tip, t-bone ham rump bacon chuck spare ribs hamburger venison. Shankle brisket chuck prosciutto ham hock andouille meatball spare ribs jowl filet mignon landjaeger.
+        </div>
+        <div class='col-md-12'>
+            Jowl ham bresaola fatback chicken strip steak t-bone chuck boudin swine capicola venison short loin pork belly. Shankle pig chicken shank. Leberkas t-bone pastrami, tail frankfurter tongue rump flank pig alcatra hamburger prosciutto ball tip ham turkey. Jerky salami pig, landjaeger beef ribs short loin swine bacon beef. Frankfurter tenderloin chuck, salami shank filet mignon andouille chicken spare ribs short ribs ham. Biltong tenderloin shankle, sirloin sausage pork pancetta venison t-bone pork belly pig short ribs. Pork belly tail turducken ball tip kielbasa pastrami cupim meatball
         </div>
     </div>
     <script src='js/resumeData.js'></script>

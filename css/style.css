@@ -1,9 +1,28 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: 'Oxygen', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
+td, th { padding: 5px; }
+
+.container {
+    margin-top: 25px;
+    box-shadow: 0 0 15px black;
+    padding:0 15px 0 15px;
+}
+.skills{
+    width: 100%;
+}
+
+@media only print {
+    .container {
+        margin-top: 5px;
+        padding:0 15px 0 15px;
+    }
+}
+    
+/*
 img {
     padding: 10px;
 }
@@ -189,64 +208,4 @@ span {
     padding: 0 0 10px 10px;
     margin: 10px 0 0 0;
 }
-
-@media only screen and (max-width: 1770px) {
-    .lets-connect {
-        display: none;
-    }
-
-    .lets-connect-inner {
-        display: block;
-    };
-}
-
-@media only screen and (min-width: 1770px) {
-    .lets-connect {
-        display: block;
-    }
-
-    .lets-connect-inner {
-        display: none;
-    };
-}
-
-@media only print and (max-width: 1770px) {
-    .lets-connect,
-    .google-map-div {
-        display: none;
-    }
-
-    .lets-connect-inner {
-        display: block;
-    };
-}
-
-@media only screen and (min-width: 750px) {
-    .skills-title {
-        display: block;
-    };
-}
-
-@media print {
-    h1 {
-        font-size: 24px;
-        line-height: 5px;
-        display: block;
-    }
-
-    h2 {
-        font-size: 18px;
-        line-height: 3px;
-        display: block;
-    }
-
-    .project-image {
-        display: none;
-    }
-
-    .education-entry,
-    .work-entry,
-    .online-course {
-        border-bottom-width: 0px;
-    };
-}
+*/
