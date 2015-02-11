@@ -176,7 +176,7 @@ var data = {
         },
             {
                 "title": "Introduction to Artificial Intelligence",
-                "school": "Udacity",
+                "school": "Stanford",
                 "dates": "2011",
                 "url": "http://www.ai-class.com",
                 "certificate": "res/AI_letter_signed.pdf"

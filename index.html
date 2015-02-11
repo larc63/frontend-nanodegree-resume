@@ -14,17 +14,23 @@
     <div id='main' class='container'>
 
         <div class='col-md-12'>
-            <h1 data-bind='text: name'></h1>
-            <p data-bind='text: role'></p>
+            <h1 data-bind='text: name' class='title-name'></h1>
+            <div class='col-md-12'>
+                <div data-bind='text: role' class='col-md-6 title-role'></div>
+                <div class='col-md-6 title-contact-info'>
+                    <a data-bind='text: email, attr: {href: emailurl}'></a> / <a data-bind='text: mobile, attr: {href: mobileurl}'></a>
+                </div>
+                <hr>
+            </div>
         </div>
         <div class='col-md-12'>
             <h2>Work Experience</h2>
             <div data-bind='foreach: jobs' class='col-md-12'>
-                <h3><span data-bind='text: employer'></span> - <span data-bind='text: title'></span></h3>
-                <p data-bind='text: dates'></p>
-                <p data-bind='text: brief'></p>
-                <p data-bind='text: description'></p>
-                <ul data-bind='foreach: roles'>
+                <h3><span data-bind='text: employer' class='work-employer'></span> - <span data-bind='text: title' class='work-title'></span></h3>
+                <p data-bind='text: dates' class='work-dates'></p>
+                <p data-bind='text: brief' class='work-brief'></p>
+                <p data-bind='text: description' class='work-description'></p>
+                <ul data-bind='foreach: roles' class='work-roles'>
                     <li data-bind='text: role'></li>
                 </ul>
             </div>
@@ -32,13 +38,13 @@
         <div class='col-md-12'>
             <h2>Projects</h2>
             <div data-bind='foreach: projects' class='col-md-12'>
-                <h3 data-bind='text: name'></h3>
-                <p data-bind='text: description'></p>
+                <h3 data-bind='text: name' class='project-name'></h3>
+                <p data-bind='text: description' class='project-description'></p>
             </div>
         </div>
         <div class='col-md-12'>
             <h2>Skills</h2>
-            <table data-bind='foreach: skills' class='col-md-12, skills'>
+            <table data-bind='foreach: skills' class='col-md-12 skills'>
                 <tr data-bind='foreach: $data'>
                     <td data-bind='text: skill'></td>
                 </tr>
@@ -61,7 +67,7 @@
             <table data-bind='foreach: coursesDisplay' class='col-md-12'>
                 <tr data-bind='foreach: $data'>
                     <td data-bind='with: course'>
-                        <a data-bind='text: title, attr:{href: url}'></a> from <span data-bind='text: school'></span> - <span data-bind='text: dates'></span>
+                        <a data-bind='text: title, attr:{href: url}'></a>from <span data-bind='text: school'></span> - <span data-bind='text: dates'></span>
                     </td>
                 </tr>
             </table>

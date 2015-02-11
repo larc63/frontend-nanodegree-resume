@@ -37,13 +37,20 @@ var Job = function (data) {
 
 var ViewModel = function () {
     var self = this;
+    this.dummyObservable = ko.observable();
     this.name = ko.observable(data.bio.name);
     this.role = ko.observable(data.bio.role);
-
+    this.email = ko.observable(data.bio.contacts.email);
+    this.emailurl = ko.computed(function(){return 'mailto:' + this.email()}, this);
+    this.mobile = ko.observable(data.bio.contacts.mobile);
+    this.mobileurl = ko.computed(function(){return 'callto:' + this.mobile()}, this);
+    
+    
     this.skills = ko.computed(function () {
         var result = [],
             row,
-            colLength = 2;
+            colLength = window.innerWidth < 1000 ? 1 : 2;
+        this.dummyObservable();
 
         //loop through items and push each item to a row array that gets pushed to the final result
         for (var i = 0, j = data.bio.skills.length; i < j; i++) {
@@ -85,7 +92,6 @@ var ViewModel = function () {
     for (p in data.education.onlineCourses) {
         this.courses.push(new Course(data.education.onlineCourses[p]));
     }
-    this.dummyObservable = ko.observable();
     this.coursesDisplay = ko.computed(function () {
         var result = [],
             row,
