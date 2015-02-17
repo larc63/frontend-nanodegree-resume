@@ -18,7 +18,12 @@
             <div class='col-md-12'>
                 <div data-bind='text: role' class='col-md-6 title-role'></div>
                 <div class='col-md-6 title-contact-info'>
-                    <a data-bind='text: email, attr: {href: emailurl}'></a> / <a data-bind='text: mobile, attr: {href: mobileurl}'></a>
+                    <a data-bind='text: email, attr: {href: emailurl}'></a>&nbsp;/
+                    <a data-bind='text: mobile, attr: {href: mobileurl}'></a>
+                </div>
+                <div class='col-md-6 title-contact-info-for-print'>
+                    <span data-bind='text: email'></span>&nbsp;/
+                    <span data-bind='text: mobile'></span>
                 </div>
                 <hr>
             </div>
@@ -35,11 +40,27 @@
                 </ul>
             </div>
         </div>
+        <!--
         <div class='col-md-12'>
             <h2>Projects</h2>
             <div data-bind='foreach: projects' class='col-md-12'>
                 <h3 data-bind='text: name' class='project-name'></h3>
                 <p data-bind='text: description' class='project-description'></p>
+            </div>
+        </div>
+-->
+
+        <div class='col-md-12'>
+            <h2>Education</h2>
+            <div data-bind='foreach: schools' class='col-md-12'>
+                <h3> <a data-bind='text: name, attr:{href: url}' class='education-school'></a></h3>
+                <h3> <span data-bind='text: name' class='education-school-for-print'></span></h3>
+                <div data-bind='text: location' class='col-md-4'></div>
+                <div class='col-md-4'></div>
+                <div data-bind='text: dates' class='col-md-4'></div>
+                <div class='col-md-12'>
+                    <span data-bind='text: degree'></span> in <span data-bind='text: major'></span>
+                </div>
             </div>
         </div>
         <div class='col-md-12'>
@@ -51,23 +72,11 @@
             </table>
         </div>
         <div class='col-md-12'>
-            <h2>Education</h2>
-            <div data-bind='foreach: schools' class='col-md-12'>
-                <h3> <a data-bind='text: name, attr:{href: url}'></a></h3>
-                <div data-bind='text: location' class='col-md-4'></div>
-                <div class='col-md-4'></div>
-                <div data-bind='text: dates' class='col-md-4'></div>
-                <div class='col-md-12'>
-                    <span data-bind='text: degree'></span> in <span data-bind='text: major'></span>
-                </div>
-            </div>
-        </div>
-        <div class='col-md-12'>
             <h2>Online Courses</h2>
-            <table data-bind='foreach: coursesDisplay' class='col-md-12'>
+            <table data-bind='foreach: coursesDisplay' class='col-md-12 courses-box'>
                 <tr data-bind='foreach: $data'>
                     <td data-bind='with: course'>
-                        <a data-bind='text: title, attr:{href: url}'></a>from <span data-bind='text: school'></span> - <span data-bind='text: dates'></span>
+                        <a data-bind='text: title, attr:{href: certificate}' class='course-title'></a><span data-bind='text: title' class='course-title-for-print'></span>&nbsp;from <span data-bind='text: school'></span> - <span data-bind='text: dates'></span>
                     </td>
                 </tr>
             </table>

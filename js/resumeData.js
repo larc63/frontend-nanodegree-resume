@@ -4,10 +4,19 @@ var data = {
         "role": "Senior Software Developer",
         "skills": [
         "Java",
-        "C/C++/Objective-C",
-        "Mobile Platforms: iOS, Android (NDK, AOSP), J2ME",
-        "HTML, CSS, JavaScript",
-        "Glue: Java Native Interface, Lua glue, JSObject"
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "C",
+        "C++",
+        "Objective-C",
+        "iOS",
+        "Android (NDK, AOSP)",
+        "J2ME",
+        "Java Native Interface",
+        "Lua",
+        "JSObject",
+        "Ant"
     ],
         "contacts": {
             "mobile": "+1 972-850-6310",
@@ -48,7 +57,7 @@ var data = {
         },
             {
                 "employer": "LemonQuest",
-                "title": "iPhone Lead Programmer.",
+                "title": "iPhone Lead Programmer",
                 "location": "Salamanca, Spain",
                 "dates": "April 2008 to June 2009",
                 "brief": "Developed 2 published titles for the iPhone platform.",
@@ -105,10 +114,18 @@ var data = {
     education: {
         "schools": [
             {
-                "name": "Centro de Investigación Científica y Educacion Superior de Ensenada",
+                "name": "Udacity",
+                "location": "Online",
+                "degree": "Nanodegree",
+                "major": "Front-end web developer",
+                "dates": "2014 - 2015",
+                "url": "http://www.udacity.com/"
+        },
+            {
+                "name": "Centro de Investigación Científica y Educación Superior de Ensenada",
                 "location": "Ensenada, B. C., Mexico",
                 "degree": "Master's",
-                "major": "Electronics and Telecommunications",
+                "major": "Electronics and Telecommunications with specialization in control systems and automation",
                 "dates": "2002 - 2005",
                 "url": "http://www.cicese.edu.mx/"
         },
@@ -123,16 +140,39 @@ var data = {
     ],
         "onlineCourses": [
             {
+                "title": "JavaScript Design Patterns",
+                "school": "Udacity",
+                "dates": "2015",
+                "url": "https://www.udacity.com/course/ud989",
+                "certificate": "#"
+        },
+            {
+                "title": "Website Performance Optimization",
+                "school": "Udacity",
+                "dates": "2014",
+                "url": "https://www.udacity.com/course/ud884",
+                "certificate": "res//UD884.pdf"
+        },
+            {
+                "title": "Object-Oriented JavaScript",
+                "school": "Udacity",
+                "dates": "2014",
+                "url": "https://www.udacity.com/course/ud015",
+                "certificate": "res//UD015.pdf"
+        },
+            {
                 "title": "Javascript Basics",
                 "school": "Udacity",
                 "dates": "2014",
-                "url": "https://www.udacity.com/course/ud804"
+                "url": "https://www.udacity.com/course/ud804",
+                "certificate": "res//UD804.pdf"
         },
             {
                 "title": "Intro to HTML and CSS",
                 "school": "Udacity",
                 "dates": "2014",
-                "url": "https://www.udacity.com/course/ud304"
+                "url": "https://www.udacity.com/course/ud304",
+                "certificate": "res/UD304.pdf"
         },
             {
                 "title": "HTML5 Game Development",
@@ -145,13 +185,15 @@ var data = {
                 "title": "jQuery",
                 "school": "Codecademy",
                 "dates": "2013",
-                "url": "http://www.codecademy.com/tracks/jquery"
+                "url": "http://www.codecademy.com/tracks/jquery",
+                "certificate": "#"
         },
             {
                 "title": "JavaScript",
                 "school": "Codecademy",
                 "dates": "2013",
-                "url": "http://www.codecademy.com/tracks/javascript"
+                "url": "http://www.codecademy.com/tracks/javascript",
+                "certificate": "#"
         },
             {
                 "title": "Software Testing",
@@ -168,7 +210,7 @@ var data = {
                 "certificate": "res/CS253.pdf"
         },
             {
-                "title": "Artificial Intellingence for Robotics",
+                "title": "Artificial Intelligence for Robotics",
                 "school": "Udacity",
                 "dates": "2012",
                 "url": "https://www.udacity.com/course/cs373",

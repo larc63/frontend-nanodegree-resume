@@ -3,6 +3,7 @@ var Course = function (data) {
     this.school = data.school;
     this.dates = data.dates;
     this.url = data.url;
+    this.certificate = data.certificate;
 }
 
 var School = function (data) {
@@ -49,7 +50,8 @@ var ViewModel = function () {
     this.skills = ko.computed(function () {
         var result = [],
             row,
-            colLength = window.innerWidth < 1000 ? 1 : 2;
+            colLength = (window.innerWidth / 300) >> 0;
+            
         this.dummyObservable();
 
         //loop through items and push each item to a row array that gets pushed to the final result
@@ -95,7 +97,7 @@ var ViewModel = function () {
     this.coursesDisplay = ko.computed(function () {
         var result = [],
             row,
-            colLength = window.innerWidth < 1000 ? 1 : 2;
+            colLength = (window.innerWidth / 750) >> 0;
         this.dummyObservable();
         //loop through items and push each item to a row array that gets pushed to the final result
         for (var i = 0, j = data.education.onlineCourses.length; i < j; i++) {
