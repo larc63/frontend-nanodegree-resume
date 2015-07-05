@@ -34,7 +34,7 @@ var data = {
                 "location": "Dallas, TX",
                 "dates": "November 2010 - Present",
                 "brief": "Design and implement functional models of the client's new products and features.",
-                "description": "Create functional models for new features to be implemented on future releases of the company's client product lines. The product lines have source code written in different languages and architectures, as a System Engineer, the design and implementation of functionalities often require visiting different layers of the system, be it communicating from devices to desktop software, making portable documents that work in the multiple architectures and form factors that the software runs on to creating stand-alone device emulators",
+                "description": "Create functional models for new features to be implemented on future releases of the company's client product lines. The product lines have source code written in different languages and architectures, as a System Engineer, the design and implementation of functionalities often require visiting different layers of the system, be it communicating from devices to desktop software, making portable documents that work on multiple architectures and form factors that the software runs on to creating stand-alone device emulators",
                 "roles": [
                 "Worked with the team responsible for re-imagining and rewriting legacy products into more modern UI/UX and their corresponding architectures and languages.",
                 "Part of the team that implemented HTML5 emulators for z80-based devices which have gone through our client's pilots involving 800k users without any reported issues.",

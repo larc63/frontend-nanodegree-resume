@@ -195,7 +195,6 @@ Uncomment all the code below when you're ready to implement a Google Map!
 // Calls the initializeMap() function when the page loads
 window.addEventListener('load', initializeMap);
 
-$(document).click(function(loc) {
+$(document).click(function (loc) {
     console.log("x location:  " + loc.pageX + " y location: " + loc.pageY);
 });
-
