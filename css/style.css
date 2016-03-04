@@ -5,26 +5,22 @@
 }
 /*
 
-hr {
-    color: grey;
-    padding: 10px;
-    padding: 10px;
-}
+
 */
 
 h1 {
-    font-size: 50px;
+    font-size: 40px;
 }
 
 h2 {
     font-style: bold;
-    font-size: 24px;
+    font-size: 20px;
     margin: 5px 0 0 0;
 }
 
 h3 {
     margin: 7px 0 0 0;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 h4 {
@@ -104,31 +100,30 @@ td, th { padding: 5px; }
 
 @media only print {
     h1 {
-        font-size: 36px;
+        font-size: 16px;
     }
 
     h2 {
-        font-style: bold;
-        font-size: 20px;
-        margin: 2px 0 0 0;
+        font-size: 14px;
+        margin: 0 0 0 0;
     }
 
     h3 {
-        font-size: 16px;
+        font-size: 12px;
         margin: 2px 0 0 0;
     }
 
     h4 {
         font-style: bold;
-        font-size: 12px;
+        font-size: 10px;
     }
     .container {
-        margin-top: 5px;
-        padding:0 15px 0 15px;
+        margin-top: 2px;
+        padding:0 8px 0 8px;
     }
     .title-role,
     .title-contact-info-for-print{
-        font-size: 14px;
+        font-size: 10px;
     }
     .title-contact-info{
         display: none;
