@@ -4,7 +4,7 @@ var data = {
         "role": "Senior Software Developer",
         "skills": [
         "Java",
-            "Swift",
+        "Swift",
         "HTML",
         "CSS",
         "JavaScript",
@@ -12,12 +12,13 @@ var data = {
         "C++",
         "Objective-C",
         "iOS",
-//        "Android (NDK, AOSP)",
-//        "J2ME",
-//        "Java Native Interface",
-//        "Lua",
-//        "JSObject",
-//        "Ant"
+        "Android (NDK, AOSP)",
+        "J2ME",
+        "Java Native Interface",
+        "Lua",
+        "JSObject",
+        "Ant",
+        "Git"
     ],
         "contacts": {
             "mobile": "+1 972-850-6310",
@@ -186,62 +187,62 @@ var data = {
                 "url": "https://www.udacity.com/course/ud585",
                 "certificate": "#"
         },
-//{
-//    "title": "JavaScript Design Patterns",
-//    "school": "Udacity",
-//    "dates": "2015",
-//    "url": "https://www.udacity.com/course/ud989",
-//    "certificate": "#"
-//},
-//{
-//    "title": "Website Performance Optimization",
-//    "school": "Udacity",
-//    "dates": "2014",
-//    "url": "https://www.udacity.com/course/ud884",
-//    "certificate": "res//UD884.pdf"
-//},
-//{
-//    "title": "Object-Oriented JavaScript",
-//    "school": "Udacity",
-//    "dates": "2014",
-//    "url": "https://www.udacity.com/course/ud015",
-//    "certificate": "res//UD015.pdf"
-//},
-//{
-//    "title": "Javascript Basics",
-//    "school": "Udacity",
-//    "dates": "2014",
-//    "url": "https://www.udacity.com/course/ud804",
-//    "certificate": "res//UD804.pdf"
-//},
-//{
-//    "title": "Intro to HTML and CSS",
-//    "school": "Udacity",
-//    "dates": "2014",
-//    "url": "https://www.udacity.com/course/ud304",
-//    "certificate": "res/UD304.pdf"
-//},
-//{
-//    "title": "HTML5 Game Development",
-//    "school": "Udacity",
-//    "dates": "2014",
-//    "url": "https://www.udacity.com/course/cs255",
-//    "certificate": "res/CS255.pdf"
-//},
-//{
-//    "title": "jQuery",
-//    "school": "Codecademy",
-//    "dates": "2013",
-//    "url": "http://www.codecademy.com/tracks/jquery",
-//    "certificate": "#"
-//},
-//{
-//    "title": "JavaScript",
-//    "school": "Codecademy",
-//    "dates": "2013",
-//    "url": "http://www.codecademy.com/tracks/javascript",
-//    "certificate": "#"
-//},
+            {
+                "title": "JavaScript Design Patterns",
+                "school": "Udacity",
+                "dates": "2015",
+                "url": "https://www.udacity.com/course/ud989",
+                "certificate": "#"
+},
+            {
+                "title": "Website Performance Optimization",
+                "school": "Udacity",
+                "dates": "2014",
+                "url": "https://www.udacity.com/course/ud884",
+                "certificate": "res//UD884.pdf"
+},
+            {
+                "title": "Object-Oriented JavaScript",
+                "school": "Udacity",
+                "dates": "2014",
+                "url": "https://www.udacity.com/course/ud015",
+                "certificate": "res//UD015.pdf"
+},
+            {
+                "title": "Javascript Basics",
+                "school": "Udacity",
+                "dates": "2014",
+                "url": "https://www.udacity.com/course/ud804",
+                "certificate": "res//UD804.pdf"
+},
+            {
+                "title": "Intro to HTML and CSS",
+                "school": "Udacity",
+                "dates": "2014",
+                "url": "https://www.udacity.com/course/ud304",
+                "certificate": "res/UD304.pdf"
+},
+            {
+                "title": "HTML5 Game Development",
+                "school": "Udacity",
+                "dates": "2014",
+                "url": "https://www.udacity.com/course/cs255",
+                "certificate": "res/CS255.pdf"
+},
+            {
+                "title": "jQuery",
+                "school": "Codecademy",
+                "dates": "2013",
+                "url": "http://www.codecademy.com/tracks/jquery",
+                "certificate": "#"
+},
+            {
+                "title": "JavaScript",
+                "school": "Codecademy",
+                "dates": "2013",
+                "url": "http://www.codecademy.com/tracks/javascript",
+                "certificate": "#"
+},
             {
                 "title": "Software Testing",
                 "school": "Udacity",
@@ -284,7 +285,7 @@ var data2 = {
         "linkedin": "larc63"
     },
     "education": {
-        "courses": []
+        "schools": ["Udacity iOS developer nanodegree", "Udacity Front-end developer nanodegree", "CICESE M. Sc. Electronics and Telecommunications", "ITESM Bs. in Electronic Systems Engineering"]
     },
     "work_experience": {
         "jobs": ["Dextra Technologies 2010-present", "Digital Chocolate 2009-10", "Lemonquest 2008-09", "Gameloft 2005-08", "Webcel 2002-2004", "RQ Consultoria Tecnica", "Soyforaneo.com"]
@@ -369,5 +370,8 @@ var data2 = {
         }, {
             "title": "Webpage prototype for soyforaneo.com 1999"
         }]
+    },
+    "courses": {
+        "courses": ["iOS Persistence and Core Data at Udacity (2015)", "iOS Networking with Swift at Udacity (2015)", "UIKit Fundamentals I at Udacity (2015)", "UIKit Fundamentals II at Udacity (2015)", "Intro to iOS App Development Swift at Udacity (2015)", "JavaScript Design Patterns at Udacity (2015)", "Website Performance Optimization at Udacity (2014)", "Object-Oriented JavaScript at Udacity (2014)", "Javascript Basics at Udacity (2014)", "Intro to HTML and CSS at Udacity (2014)", "HTML5 Game Development at Udacity (2014)", "jQuery at Codecademy (2013)", "JavaScript at Codecademy (2013)", "Software Testing at Udacity (2012)", "Web Application Engineering at Udacity (2012)", "Artificial Intelligence for Robotics at Udacity (2012)", "Introduction to Artificial Intelligence at Stanford (2011)", "Brew Mobile Platform Developer workshop. San Diego, CA (December 2009)", "Basic French. Ensenada, BC (summer 2003)", "Basic Italian. Monterrey, NL (Spring 1998)"]
     }
 };

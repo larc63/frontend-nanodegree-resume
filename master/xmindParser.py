@@ -48,7 +48,7 @@ for topic in topics:
             children = bioTopic.find("xmind:children", ns)
             if children:
                 bioTopicContent = children[0][0].find("xmind:title", ns).text
-                print bioTopicTitle, bioTopicContent
+                # print bioTopicTitle, bioTopicContent
                 bioDict[bioTopicTitle.lower()] = bioTopicContent
         output["bio"] = bioDict
     elif title == "Education":
@@ -69,8 +69,8 @@ for topic in topics:
         for job in innerTopics:
             jobTitle = job.find("xmind:title", ns)
             # print jobTitle.text
-            schools.append(jobTitle.text)
-        output["education"] = {"courses" : courses}
+            courses.append(jobTitle.text)
+        output["courses"] = {"courses" : courses}
     elif title == "Projects":
         children = topic.find("xmind:children", ns)
         innerTopics = children[0]
@@ -78,7 +78,7 @@ for topic in topics:
         for project in innerTopics:
             jobTitle = project.find("xmind:title", ns)
             projectDictionary = {"title": jobTitle.text}
-            print jobTitle.text
+            # print jobTitle.text
             # walk the children
             children = project.find("xmind:children", ns)
             if children:

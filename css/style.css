@@ -121,7 +121,9 @@ td, th { padding: 5px; }
         margin-top: 2px;
         padding:0 8px 0 8px;
     }
-    .title-role,
+    .title-role {
+        display: none;
+    }
     .title-contact-info-for-print{
         font-size: 10px;
     }
@@ -130,12 +132,6 @@ td, th { padding: 5px; }
     }
     .title-contact-info-for-print{
         display: inline;
-    }
-    .education-school{
-        display: none;
-    }
-    .education-school-for-print{
-        display: block;
     }
     .course-title{
         display: none;
