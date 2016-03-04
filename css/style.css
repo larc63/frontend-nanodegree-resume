@@ -75,8 +75,13 @@ td, th { padding: 5px; }
 .work-roles{
     margin-left: 4em;
 }
-.project-name{}
-.project-description{}
+.project-name{
+    font-size: 16px;
+}
+.project-description{
+    margin-top: 1px;
+    margin-left: 2em;
+}
 
 .skills{
     width: 90%;
@@ -100,26 +105,26 @@ td, th { padding: 5px; }
 
 @media only print {
     h1 {
-        font-size: 16px;
+        font-size: 12px;
     }
 
     h2 {
-        font-size: 14px;
+        font-size: 11px;
         margin: 0 0 0 0;
     }
 
     h3 {
-        font-size: 12px;
-        margin: 2px 0 0 0;
+        font-size: 10px;
+        margin: 1px 0 0 0;
     }
 
     h4 {
         font-style: bold;
-        font-size: 10px;
+        font-size: 9px;
     }
     .container {
-        margin-top: 2px;
-        padding:0 8px 0 8px;
+        margin-top: 1px;
+        padding:0 4px 0 8px;
     }
     .title-role {
         display: none;

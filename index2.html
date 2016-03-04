@@ -18,19 +18,25 @@
         <div class="col-md-12">
             <h1 data-bind="text: name" class="title-name"></h1>
             <div class="col-md-12">
-                <div data-bind="text: role" class="col-md-6 title-role"></div>
-                <div class="col-md-6 title-contact-info">
+                <div data-bind="text: role" class="col-md-4 title-role"></div>
+                <div class="col-md-8 title-contact-info">
                     <a data-bind="text: email, attr: {href: emailurl}"></a>&nbsp;/
-                    <a data-bind="text: mobile, attr: {href: mobileurl}"></a>
+                    <a data-bind="text: mobile, attr: {href: mobileurl}"></a>&nbsp;/
+                    <a data-bind="text: twitter, attr: {href: twitterurl}"></a>&nbsp;/
+                    <a data-bind="text: linkedin, attr: {href: linkedinurl}"></a>&nbsp;/
+                    <a data-bind="text: github, attr: {href: githuburl}"></a>
                 </div>
-                <div class="col-md-6 title-contact-info-for-print">
+                <div class="col-md-8 title-contact-info-for-print">
                     <span data-bind="text: email"></span>&nbsp;/
-                    <span data-bind="text: mobile"></span>
+                    <span data-bind="text: mobile"></span>&nbsp;/
+                    <span data-bind="text: twitterurl"></span>&nbsp;/
+                    <span data-bind="text: linkedinurl"></span>&nbsp;/
+                    <span data-bind="text: githuburl"></span>
                 </div>
                 <hr>
             </div>
         </div>
-        <!--
+        
         <div class="col-md-12">
             <h2>Skills</h2>
             <table data-bind="foreach: skills" class="col-md-12 skills">
@@ -39,7 +45,17 @@
                 </tr>
             </table>
         </div>
--->
+        
+        <div class="col-md-12">
+            <h2>Projects</h2>
+            <div data-bind="foreach: projects" class="col-md-12">
+                <h3 data-bind="text: name" class="project-name"></h3>
+                <ul data-bind="foreach: details">
+                <li data-bind="text: detail" class="project-description"></li>
+                </ul>
+            </div>
+        </div>
+
         <!--
         <div class="col-md-12">
             <h2>Work Experience</h2>
@@ -54,15 +70,7 @@
             </div>
         </div>
 -->
-        <!--
-        <div class="col-md-12">
-            <h2>Projects</h2>
-            <div data-bind="foreach: projects" class="col-md-12">
-                <h3 data-bind="text: name" class="project-name"></h3>
-                <p data-bind="text: description" class="project-description"></p>
-            </div>
-        </div>
--->
+
 
         <div class="col-md-12">
             <h2>Education</h2>

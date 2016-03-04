@@ -279,62 +279,45 @@ var data = {
 var data2 = {
     "bio": {
         "phone": "+1 972-850-6310",
-        "twitter": "@larc63",
+        "twitter": "larc63",
         "github": "larc63",
         "email": "larc63@gmail.com",
         "linkedin": "larc63"
     },
+    "skills": {
+        "skills": ["Java", "Swift", "JavaScript", "Objective-C", "iOS", "Git", "Scrum"]
+    },
+    "courses": {
+        "courses": ["iOS Persistence and Core Data at Udacity (2015)", "iOS Networking with Swift at Udacity (2015)", "UIKit Fundamentals I at Udacity (2015)", "UIKit Fundamentals II at Udacity (2015)", "Intro to iOS App Development Swift at Udacity (2015)"]
+    },
+    "work_experience": {
+        "jobs": ["Dextra Technologies 2010-present", "Digital Chocolate 2009-10", "Lemonquest 2008-09", "Gameloft 2005-08"]
+    },
     "education": {
         "schools": ["Udacity iOS developer nanodegree", "Udacity Front-end developer nanodegree", "CICESE M. Sc. Electronics and Telecommunications", "ITESM Bs. in Electronic Systems Engineering"]
     },
-    "work_experience": {
-        "jobs": ["Dextra Technologies 2010-present", "Digital Chocolate 2009-10", "Lemonquest 2008-09", "Gameloft 2005-08", "Webcel 2002-2004", "RQ Consultoria Tecnica", "Soyforaneo.com"]
-    },
     "projects": {
         "projects": [{
-            "details": ["Designed and built a virtual keypad for an emulated device over the internet using html5 and java."],
-            "title": "Remote Keyboard (Wireless) for Texas Instruments via Dextra Technologies - 2015-16"
-        }, {
             "details": ["Ported the communications layer on a utility that talks to TI calculators using Chrome's USB API."],
             "title": "Chrome App for Texas Instruments via Dextra Technologies - 2015-16"
-        }, {
-            "details": ["Designed and implemented the adapter to enable use of a usb connected keypad with emulated hardware in a java/javascript desktop application."],
-            "title": "Remote Keyboard for Texas Instruments via Dextra Technologies - 2014"
-        }, {
-            "details": ["Determined the risk associated with updating the tools used to build the desktop products.", "https://education.ti.com/en/us/software/search/ti-84-plus-ce"],
-            "title": "Toolchain update investigation for Texas Instruments via Dextra Technologies - 2014"
-        }, {
-            "details": ["Worked closely with the Product Managers to write and review user requirements", "Designed and implemented features related to interacting with emulated hardware", "https://education.ti.com/en/us/products/computer_software/ti-smartview-software/ti-smartview-ce-emulator-software-for-the-ti-84-plus-family/tabs/overview"],
-            "title": "TI Smartview for Texas Instruments via Dextra Technologies - 2013-14"
-        }, {
-            "details": ["Worked closely with the Product Managers to write and review User Requirements", "Designed and implemented features related to usb connectivity for the desktop utility used on Windows and Mac OS", "https://education.ti.com/en/us/products/computer_software/connectivity-software/ti-connect-ce-software/tabs/overview"],
-            "title": "TI Connect for Texas Instruments via Dextra Technologies - 2013"
-        }, {
+        },{
             "details": ["Worked closely with the Product Managers to write and review User Requirements", "Ported z80-based calculator emulators from Java and C to Javascript", "Pilots involving 800k users without any reported issues.", "https://education.ti.com/en/us/about/press-center/press-listing-content-module/6-20-2013-ccss"],
             "title": "ExamCalcs\t for Texas Instruments via Dextra Technologies - 2013-15"
-        }, {
-            "details": ["Reviewed requirements for homologating the way documents are displayed accross different platforms/screen sizes.", "https://education.ti.com/en/us/products/apps/ti-nspire-app-for-ipad/tabs/overview"],
-            "title": "Document standarization on iOS for Texas Instruments via Dextra Technologies - 2012"
-        }, {
-            "details": ["Researched vnc server options for an OMAP-based android device"],
-            "title": "AOSP VNC server  for Texas Instruments via Dextra Technologies - 2012"
-        }, {
-            "details": ["Designed and implemented the infrastructure for creating new classroom activities using the Lua scripting language.", "The C counterpart for the Lua bindings, as well as the Lua engine itself gets cross-compiled to run on different platform including iOS, Nucleus and desktop operating systems.", "https://education.ti.com/sites/US/downloads/pdf/TI-Nspire%20Navigator%203%202%20Release%20Notes.pdf"],
-            "title": "Image Question  for Texas Instruments via Dextra Technologies - 2011-12"
-        }, {
-            "title": "Multithreading refactor   for Texas Instruments via Dextra Technologies - 2011-12"
         }, {
             "details": ["Ported iPhone implementation of OpenGL game to Brew", "https://itunes.apple.com/us/app/3d-rollercoaster-rush/id319575672"],
             "title": "Rollercoaster game for Digital Chocolate 2010"
         }, {
-            "details": ["Made the necessary changes for the recently created game to work on low-end J2ME devices", "https://play.google.com/store/apps/details?id=com.digitalchocolate.androidchivoflexion"],
-            "title": "Space invaders for Digital Chocolate 2010"
-        }, {
-            "details": ["Designed and developed a reusable library that provides an API for in-app-purchases using Brew.", "Sprint U. S. Campaign"],
-            "title": "BREW in app purchase library for Digital Chocolate 2010"
-        }, {
             "details": ["Wrote pedometer and fitness tips application for the iPhone"],
             "title": "iFit for Lemonquest 2009"
+        }, {
+            "details": ["https://itunes.apple.com/us/app/50-chinese-words-learn-to/id312982180?mt=8", "Wrote an application that reproduces the strokes necessary for writing chinese characters as well as playing their sound", "Developed a Chinese character writing tutor for the iPhone"],
+            "title": "50 Chinese Words for One Element - 2009"
+        }, {
+            "details": ["Wrote graphics engine and all art for a card game targeted towards the iPhone."],
+            "title": "Big 2 Poker"
+        }, {
+            "details": ["Wrote a relegious-focused application that shows images, plays sounds and uses the accelerometer to interact with the user."],
+            "title": "iAarti for Katha Films 2008-09"
         }, {
             "details": ["Ported the directx graphics engine impementation to the iPhone's OpenGL ES framework", "Implemente 3d audio library that maps the user's location to reproduce sounds in a 3d-mapped manner.", "Translated levels originally designed for desktop/mouse to be usable on a touch device", "Game was awarded a bronze medal by pocketgamer.uk http://www.pocketgamer.co.uk/r/iPhone/Circulate+%28iPhone%29/review.asp?c=11151&tab=tips"],
             "title": "Circulate for Lemonquest 2009"
@@ -344,34 +327,6 @@ var data2 = {
         }, {
             "details": ["Developed and ported first prototype for the brickbreaker game using the celestial framework for iPhone", "After getting the first company-wide prototype to work, our office was able to take on more projects than what would have originally been assigned to us."],
             "title": "Blockbreaker for iPhone for Gameloft - 2007-08"
-        }, {
-            "details": ["Implemented minigames within the game engine", "Made the necessary changes for the recently created game to work on low-end J2ME devices", "https://www.youtube.com/watch?v=_Kf7oVgPweg"],
-            "title": "Bikini Volleyball for Gameloft - 2007"
-        }, {
-            "details": ["Ported games from different sources for a few lower-end java devices"],
-            "title": "3d porting on Sprint devices for Gameloft - 2006-07"
-        }, {
-            "details": ["Ported games from different sources for a few lower-end java devices that had a 100k jar size limitation"],
-            "title": "Virgin Mobile Projects for Gameloft 2005-2006"
-        }, {
-            "details": ["Wrote a relegious-focused application that shows images, plays sounds and uses the accelerometer to interact with the user."],
-            "title": "iAarti for Katha Films 2008-09"
-        }, {
-            "details": ["https://itunes.apple.com/us/app/50-chinese-words-learn-to/id312982180?mt=8", "Wrote an application that reproduces the strokes necessary for writing chinese characters as well as playing their sound", "Developed a Chinese character writing tutor for the iPhone"],
-            "title": "50 Chinese Words for One Element - 2009"
-        }, {
-            "title": "Radio Lobo"
-        }, {
-            "title": "Server checker"
-        }, {
-            "title": "Courthouse checker"
-        }, {
-            "title": "MS2000 Maintenance Manager"
-        }, {
-            "title": "Webpage prototype for soyforaneo.com 1999"
         }]
-    },
-    "courses": {
-        "courses": ["iOS Persistence and Core Data at Udacity (2015)", "iOS Networking with Swift at Udacity (2015)", "UIKit Fundamentals I at Udacity (2015)", "UIKit Fundamentals II at Udacity (2015)", "Intro to iOS App Development Swift at Udacity (2015)", "JavaScript Design Patterns at Udacity (2015)", "Website Performance Optimization at Udacity (2014)", "Object-Oriented JavaScript at Udacity (2014)", "Javascript Basics at Udacity (2014)", "Intro to HTML and CSS at Udacity (2014)", "HTML5 Game Development at Udacity (2014)", "jQuery at Codecademy (2013)", "JavaScript at Codecademy (2013)", "Software Testing at Udacity (2012)", "Web Application Engineering at Udacity (2012)", "Artificial Intelligence for Robotics at Udacity (2012)", "Introduction to Artificial Intelligence at Stanford (2011)", "Brew Mobile Platform Developer workshop. San Diego, CA (December 2009)", "Basic French. Ensenada, BC (summer 2003)", "Basic Italian. Monterrey, NL (Spring 1998)"]
     }
 };

@@ -38,6 +38,14 @@ for topic in topics:
             jobTitle = job.find("xmind:title", ns)
             jobs.append(jobTitle.text)
         output["work_experience"] = {"jobs" : jobs}
+    elif title == "Skills":
+        children = topic.find("xmind:children", ns)
+        innerTopics = children[0]
+        skills = []
+        for job in innerTopics:
+            jobTitle = job.find("xmind:title", ns)
+            skills.append(jobTitle.text)
+        output["skills"] = {"skills" : skills}
     elif title == "Bio":
         children = topic.find("xmind:children", ns)
         innerTopics = children[0]

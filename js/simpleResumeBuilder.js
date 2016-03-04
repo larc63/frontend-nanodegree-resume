@@ -16,8 +16,16 @@ var School = function (data) {
 };
 
 var Project = function (data) {
-    this.name = data.name;
-    this.description = data.description;
+    var self = this;
+    this.name = data.title;
+    this.details = ko.observableArray([]);
+    if (data.details) {
+        data.details.forEach(function (d) {
+            self.details.push({
+                "detail": d
+            });
+        });
+    }
 };
 
 var Job = function (data) {
@@ -45,41 +53,53 @@ var ViewModel = function () {
     this.role = ko.observable(data.bio.role);
     this.email = ko.observable(data2.bio.email);
     this.emailurl = ko.computed(function () {
-        return 'mailto:' + this.email()
+        return 'mailto:' + this.email();
     }, this);
     this.mobile = ko.observable(data2.bio.phone);
     this.mobileurl = ko.computed(function () {
-        return 'callto:' + this.mobile()
+        return 'callto:' + this.mobile();
+    }, this);
+    this.twitter = ko.observable(data2.bio.twitter);
+    this.twitterurl = ko.computed(function () {
+        return 'http://www.twitter.com/' + this.twitter();
+    }, this);
+    this.linkedin = ko.observable(data2.bio.linkedin);
+    this.linkedinurl = ko.computed(function () {
+        return 'https://www.linkedin.com/in/' + this.linkedin();
+    }, this);
+    this.github = ko.observable(data2.bio.github);
+    this.githuburl = ko.computed(function () {
+        return 'https://github.com/' + this.github();
     }, this);
 
 
-        this.skills = ko.computed(function () {
-            var result = [],
-                row,
-                colLength = (window.innerWidth / 200) >> 0;
-    
-            this.dummyObservable();
-    
-            //loop through items and push each item to a row array that gets pushed to the final result
-            for (var i = 0, j = data.bio.skills.length; i < j; i++) {
-                if (i % colLength === 0) {
-                    if (row) {
-                        result.push(row);
-                    }
-                    row = [];
+    this.skills = ko.computed(function () {
+        var result = [],
+            row,
+            colLength = (window.innerWidth / 200) >> 0;
+
+        this.dummyObservable();
+
+        //loop through items and push each item to a row array that gets pushed to the final result
+        for (var i = 0, j = data2.skills.skills.length; i < j; i++) {
+            if (i % colLength === 0) {
+                if (row) {
+                    result.push(row);
                 }
-                row.push({
-                    skill: data.bio.skills[i]
-                });
+                row = [];
             }
-    
-            //push the final row  
-            if (row) {
-                result.push(row);
-            }
-    
-            return result;
-        }, this);
+            row.push({
+                skill: data2.skills.skills[i]
+            });
+        }
+
+        //push the final row  
+        if (row) {
+            result.push(row);
+        }
+
+        return result;
+    }, this);
 
     self.jobs = ko.observableArray([]);
     //    for (j in data.work.jobs) {
@@ -87,44 +107,44 @@ var ViewModel = function () {
     //    }
 
     self.projects = ko.observableArray([]);
-    //    for (p in data.projects.projects) {
-    //        this.projects.push(new Project(data.projects.projects[p]));
-    //    }
+    for (var p in data2.projects.projects) {
+        this.projects.push(new Project(data2.projects.projects[p]));
+    }
 
     self.schools = ko.observableArray([]);
-    for (var p in data2.education.schools) {
+    for (p in data2.education.schools) {
         this.schools.push(new School(data2.education.schools[p]));
     }
 
     self.courses = ko.observableArray([]);
-        for (p in data.education.onlineCourses) {
-            this.courses.push(new Course(data.education.onlineCourses[p]));
-        }
-        this.coursesDisplay = ko.computed(function () {
-            var result = [],
-                row = [],
-                colLength = (window.innerWidth / 750) >> 0;
-            this.dummyObservable();
-            //loop through items and push each item to a row array that gets pushed to the final result
-            for (var i = 0, j = data.education.onlineCourses.length; i < j; i++) {
-                if (i % colLength === 0) {
-                    if (row) {
-                        result.push(row);
-                    }
-                    row = [];
+    for (p in data.education.onlineCourses) {
+        this.courses.push(new Course(data.education.onlineCourses[p]));
+    }
+    this.coursesDisplay = ko.computed(function () {
+        var result = [],
+            row = [],
+            colLength = (window.innerWidth / 750) >> 0;
+        this.dummyObservable();
+        //loop through items and push each item to a row array that gets pushed to the final result
+        for (var i = 0, j = data.education.onlineCourses.length; i < j; i++) {
+            if (i % colLength === 0) {
+                if (row) {
+                    result.push(row);
                 }
-                row.push({
-                    course: data.education.onlineCourses[i]
-                });
+                row = [];
             }
-    
-            //push the final row  
-            if (row) {
-                result.push(row);
-            }
-    
-            return result;
-        }, this);
+            row.push({
+                course: data.education.onlineCourses[i]
+            });
+        }
+
+        //push the final row  
+        if (row) {
+            result.push(row);
+        }
+
+        return result;
+    }, this);
 };
 
 ViewModel.prototype.resizeListener = function () {
