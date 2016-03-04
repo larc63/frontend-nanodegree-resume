@@ -54,7 +54,7 @@ var ViewModel = function () {
     this.skills = ko.computed(function () {
         var result = [],
             row,
-            colLength = (window.innerWidth / 300) >> 0;
+            colLength = (window.innerWidth / 200) >> 0;
 
         this.dummyObservable();
 

@@ -32,6 +32,14 @@
             </div>
         </div>
         <div class='col-md-12'>
+            <h2>Skills</h2>
+            <table data-bind='foreach: skills' class='col-md-12 skills'>
+                <tr data-bind='foreach: $data'>
+                    <td data-bind='text: skill'></td>
+                </tr>
+            </table>
+        </div>
+        <div class='col-md-12'>
             <h2>Work Experience</h2>
             <div data-bind='foreach: jobs' class='col-md-12'>
                 <h3><span data-bind='text: employer' class='work-employer'></span> - <span data-bind='text: title' class='work-title'></span></h3>
@@ -55,6 +63,18 @@
 
         <div class='col-md-12'>
             <h2>Education</h2>
+            <div data-bind='foreach: schools' class='col-md-6'>
+                <div class='col-md-6'>
+                    <a data-bind='text: name, attr:{href: url}' class='education-school'></a>
+                    <span data-bind='text: name' class='education-school-for-print'></span></div>
+                <div class='col-md-6'>
+                    <span data-bind='text: degree'></span> in <span data-bind='text: major'></span>
+                </div>
+            </div>
+        </div>
+        <!--
+        <div class='col-md-12'>
+            <h2>Education</h2>
             <div data-bind='foreach: schools' class='col-md-12'>
                 <h3> <a data-bind='text: name, attr:{href: url}' class='education-school'></a></h3>
                 <h3> <span data-bind='text: name' class='education-school-for-print'></span></h3>
@@ -66,14 +86,8 @@
                 </div>
             </div>
         </div>
-        <div class='col-md-12'>
-            <h2>Skills</h2>
-            <table data-bind='foreach: skills' class='col-md-12 skills'>
-                <tr data-bind='foreach: $data'>
-                    <td data-bind='text: skill'></td>
-                </tr>
-            </table>
-        </div>
+-->
+
         <div class='col-md-12'>
             <h2>Online Courses</h2>
             <table data-bind='foreach: coursesDisplay' class='col-md-12 courses-box'>
