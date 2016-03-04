@@ -38,6 +38,19 @@ for topic in topics:
             jobTitle = job.find("xmind:title", ns)
             jobs.append(jobTitle.text)
         output["work_experience"] = {"jobs" : jobs}
+    elif title == "Bio":
+        children = topic.find("xmind:children", ns)
+        innerTopics = children[0]
+        # print innerTopics
+        bioDict = {}
+        for bioTopic in innerTopics:
+            bioTopicTitle = bioTopic.find("xmind:title", ns).text
+            children = bioTopic.find("xmind:children", ns)
+            if children:
+                bioTopicContent = children[0][0].find("xmind:title", ns).text
+                print bioTopicTitle, bioTopicContent
+                bioDict[bioTopicTitle.lower()] = bioTopicContent
+        output["bio"] = bioDict
     elif title == "Education":
         children = topic.find("xmind:children", ns)
         innerTopics = children[0]

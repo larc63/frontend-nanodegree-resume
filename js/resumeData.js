@@ -276,11 +276,18 @@ var data = {
 
 
 var data2 = {
+    "bio": {
+        "phone": "+1 972-850-6310",
+        "twitter": "@larc63",
+        "github": "larc63",
+        "email": "larc63@gmail.com",
+        "linkedin": "larc63"
+    },
     "education": {
-        "schools": ["Udacity iOS developer nanodegree", "Udacity Front-end developer nanodegree", "CICESE M. Sc. Electronics and Telecommunications", "ITESM Bs. in Electronic Systems Engineering", "Courses"]
+        "courses": []
     },
     "work_experience": {
-        "jobs": ["Dextra Technologies 2010-present", "Digital Chocolate 2009-10", "Lemonquest 2008-09", "Gameloft 2005-08", "Webcel 2002-2004", "Soyforaneo.com"]
+        "jobs": ["Dextra Technologies 2010-present", "Digital Chocolate 2009-10", "Lemonquest 2008-09", "Gameloft 2005-08", "Webcel 2002-2004", "RQ Consultoria Tecnica", "Soyforaneo.com"]
     },
     "projects": {
         "projects": [{
@@ -303,18 +310,18 @@ var data2 = {
             "title": "TI Connect for Texas Instruments via Dextra Technologies - 2013"
         }, {
             "details": ["Worked closely with the Product Managers to write and review User Requirements", "Ported z80-based calculator emulators from Java and C to Javascript", "Pilots involving 800k users without any reported issues.", "https://education.ti.com/en/us/about/press-center/press-listing-content-module/6-20-2013-ccss"],
-            "title": "ExamCalcs for Texas Instruments via Dextra Technologies - 2013-15"
+            "title": "ExamCalcs\t for Texas Instruments via Dextra Technologies - 2013-15"
         }, {
             "details": ["Reviewed requirements for homologating the way documents are displayed accross different platforms/screen sizes.", "https://education.ti.com/en/us/products/apps/ti-nspire-app-for-ipad/tabs/overview"],
             "title": "Document standarization on iOS for Texas Instruments via Dextra Technologies - 2012"
         }, {
             "details": ["Researched vnc server options for an OMAP-based android device"],
-            "title": "AOSP VNC server for Texas Instruments via Dextra Technologies - 2012"
+            "title": "AOSP VNC server  for Texas Instruments via Dextra Technologies - 2012"
         }, {
             "details": ["Designed and implemented the infrastructure for creating new classroom activities using the Lua scripting language.", "The C counterpart for the Lua bindings, as well as the Lua engine itself gets cross-compiled to run on different platform including iOS, Nucleus and desktop operating systems.", "https://education.ti.com/sites/US/downloads/pdf/TI-Nspire%20Navigator%203%202%20Release%20Notes.pdf"],
-            "title": "Image Question for Texas Instruments via Dextra Technologies - 2011-12"
+            "title": "Image Question  for Texas Instruments via Dextra Technologies - 2011-12"
         }, {
-            "title": "Multithreading refactor for Texas Instruments via Dextra Technologies - 2011-12"
+            "title": "Multithreading refactor   for Texas Instruments via Dextra Technologies - 2011-12"
         }, {
             "details": ["Ported iPhone implementation of OpenGL game to Brew", "https://itunes.apple.com/us/app/3d-rollercoaster-rush/id319575672"],
             "title": "Rollercoaster game for Digital Chocolate 2010"
@@ -351,6 +358,16 @@ var data2 = {
         }, {
             "details": ["https://itunes.apple.com/us/app/50-chinese-words-learn-to/id312982180?mt=8", "Wrote an application that reproduces the strokes necessary for writing chinese characters as well as playing their sound", "Developed a Chinese character writing tutor for the iPhone"],
             "title": "50 Chinese Words for One Element - 2009"
+        }, {
+            "title": "Radio Lobo"
+        }, {
+            "title": "Server checker"
+        }, {
+            "title": "Courthouse checker"
+        }, {
+            "title": "MS2000 Maintenance Manager"
+        }, {
+            "title": "Webpage prototype for soyforaneo.com 1999"
         }]
     }
 };
