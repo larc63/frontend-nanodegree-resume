@@ -298,32 +298,41 @@ var data2 = {
     },
     "projects": {
         "projects": [{
+            "date": "2015 - 16",
             "details": ["Ported the communications layer on a utility that talks to TI calculators using Chrome's USB API."],
-            "title": "Chrome App for Texas Instruments via Dextra Technologies - 2015-16"
+            "title": "Chrome App for Texas Instruments via Dextra Technologies"
         }, {
+            "date": " 2013 - 15",
             "details": ["Worked closely with the Product Managers to write and review User Requirements", "Ported and implemented z80-based calculator emulators to html5.", "Pilots involving 800k users without any reported issues.", "https://education.ti.com/en/us/about/press-center/press-listing-content-module/6-20-2013-ccss"],
-            "title": "ExamCalcs for Texas Instruments via Dextra Technologies - 2013-15"
+            "title": "ExamCalcs for Texas Instruments via Dextra Technologies"
         }, {
+            "date": "2010",
             "details": ["Ported iPhone implementation of OpenGL game to Brew", "https://itunes.apple.com/us/app/3d-rollercoaster-rush/id319575672"],
-            "title": "Rollercoaster Rush for Digital Chocolate 2010"
+            "title": "Rollercoaster Rush for Digital Chocolate"
         }, {
+            "date": "2009",
             "details": ["Wrote an application that reproduces the strokes necessary for writing chinese characters as well as playing their sound", "Developed a Chinese character writing tutor for the iPhone", "https://itunes.apple.com/us/app/50-chinese-words-learn-to/id312982180?mt=8"],
-            "title": "50 Chinese Words for One Element - 2009"
+            "title": "50 Chinese Words for One Element"
         }, {
+            "date": "2008 - 09",
             "details": ["Wrote graphics engine using C and OpenGL as well as all art for a card game targeted towards the iPhone.", "Ported the directx graphics engine impementation to the iPhone's OpenGL ES framework"],
-            "title": "Big 2 Poker"
+            "title": "Big 2 Poker "
         }, {
+            "date": "2008 - 09",
             "details": ["Wrote a relegious-focused application that shows images, plays sounds and uses the iPhone's accelerometer to interact with the user."],
-            "title": "iAarti for Katha Films 2008-09"
+            "title": "iAarti for Katha Films"
         }, {
+            "date": "2009",
             "details": ["Ported the directx impementation to the iPhone's OpenGL ES framework", "Translated levels originally designed for desktop/mouse to be usable on a touch device", "Game was awarded a bronze medal by pocketgamer.uk", " http://www.pocketgamer.co.uk/r/iPhone/Circulate+%28iPhone%29/review.asp?c=11151&tab=tips"],
-            "title": "Circulate for Lemonquest 2009"
+            "title": "Circulate for Lemonquest"
         }, {
+            "date": "2008",
             "details": ["Ported the directx impementation to the iPhone's OpenGL ES framework", "Implemented 3d audio library that maps the user's location to reproduce sounds in a 3d-mapped manner using the OpenAL library for iPhone."],
-            "title": "Circulate Prologue for Lemonquest 2008"
+            "title": "Circulate Prologue for Lemonquest"
         }, {
+            "date": "2007 - 08",
             "details": ["Developed and ported first prototype for the brickbreaker game using the Celestial framework for iPhone", "After getting the first company-wide prototype to work, our office was able to take on more projects than what would have originally been assigned to us."],
-            "title": "Blockbreaker for iPhone for Gameloft - 2007-08"
+            "title": "Blockbreaker for iPhone for Gameloft"
         }]
     }
 };
