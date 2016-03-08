@@ -3,6 +3,8 @@
     margin: 0;
     font-family: 'Open Sans', sans-serif;
 }
+
+
 /*
 
 
@@ -28,12 +30,14 @@ h4 {
     font-size: 14px;
 }
 
-a{
+a {
     color: black;
 }
 
-
-td, th { padding: 5px; }
+td,
+th {
+    padding: 5px;
+}
 
 .container {
     margin-top: 25px;
@@ -41,117 +45,129 @@ td, th { padding: 5px; }
     box-shadow: 0 0 15px grey;
     padding: 10px 15px 0 15px;
 }
-.col-md-12{
+
+.col-md-12 {
     margin-bottom: 5px;
 }
-.title-name{
+
+.title-name {
     margin-top: 25px;
 }
 
-.work-dates{
+.work-dates {
     font-style: italic;
 }
 
 .title-role,
 .title-contact-info,
-.title-contact-info-for-print{
+.title-contact-info-for-print {
     font-style: italic;
     font-size: 20px;
 }
 
 .title-contact-info,
-.title-contact-info-for-print{
+.title-contact-info-for-print {
     text-align: right;
 }
 
-.title-contact-info-for-print{
+.title-contact-info-for-print {
     font-size: 16px;
     display: none;
 }
-.work-employer{}
-.work-title{}
-.work-brief{}
-.work-description{}
-.work-roles{
+
+.work-employer {}
+
+.work-title {}
+
+.work-brief {}
+
+.work-description {}
+
+.work-roles {
     margin-left: 4em;
 }
-.project-name{
+
+.project-name {
     font-size: 16px;
 }
-.project-description{
+
+.project-description {
     margin-top: 1px;
     margin-left: 2em;
 }
 
-.skills{
+.skills {
     width: 90%;
     margin-left: 2em;
 }
 
-.education-school{
-}
-.education-school-for-print{
-    display: none;
-}
-.course-title{}
-.course-title-for-print{
+.education-school {}
+
+.education-school-for-print {
     display: none;
 }
 
-.courses-box{
+.course-title {}
+
+.course-title-for-print {
+    display: none;
+}
+
+.courses-box {
     margin-left: 2em;
     margin-right: 2em;
 }
 
 @media only print {
-    body{
+    body {
         font-size: 11px;
     }
     h1 {
         font-size: 20px;
     }
-
     h2 {
         font-size: 16px;
         margin: 0 0 0 0;
     }
-
     h3 {
         font-size: 14px;
         margin: 1px 0 0 0;
     }
-
     h4 {
         font-style: bold;
         font-size: 12px;
     }
     .container {
         margin-top: 1px;
-        padding:0 4px 0 8px;
+        padding: 0 4px 0 8px;
+    }
+    .col-md-12 {
+        margin-bottom: 2px;
     }
     .title-name {
+        margin-top: 5px;
         font-size: 28px;
-        padding:0 2em 0 2em;
+        padding: 0 2em 0 2em;
     }
     .title-role {
         display: none;
     }
-    .title-contact-info-for-print{
+    .title-contact-info-for-print {
         font-size: 10px;
     }
-    .title-contact-info{
+    .title-contact-info {
         display: none;
     }
-    .title-contact-info-for-print{
+    .title-contact-info-for-print {
         display: inline;
     }
-    .project-name{
+    .project-name {
         font-size: 13px;
     }
-    .course-title{
+    .course-title {
         display: none;
     }
-    .course-title-for-print{
+    .course-title-for-print {
         display: inline;
     }
 }
