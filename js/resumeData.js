@@ -291,7 +291,7 @@ var data2 = {
         "courses": ["iOS Persistence and Core Data at Udacity (2015)", "iOS Networking with Swift at Udacity (2015)", "UIKit Fundamentals I at Udacity (2015)", "UIKit Fundamentals II at Udacity (2015)", "Intro to iOS App Development Swift at Udacity (2015)"]
     },
     "work_experience": {
-        "jobs": ["Dextra Technologies 2010-present", "Digital Chocolate 2009-10", "Lemonquest 2008-09", "Gameloft 2005-08"]
+        "jobs": ["System Engineer for Dextra Technologies, November 2010 - present", "Game Engineering Manager for Digital Chocolate June 2009 to October 2010", "iPhone Lead Programmer for Lemonquest April 2008 to July 2009", "Game Programmer for Gameloft August 2005 to March 2008"]
     },
     "education": {
         "schools": ["Udacity iOS developer nanodegree", "Udacity Front-end developer nanodegree", "CICESE M. Sc. Electronics and Telecommunications", "ITESM Bs. in Electronic Systems Engineering"]
@@ -300,32 +300,29 @@ var data2 = {
         "projects": [{
             "details": ["Ported the communications layer on a utility that talks to TI calculators using Chrome's USB API."],
             "title": "Chrome App for Texas Instruments via Dextra Technologies - 2015-16"
-        },{
-            "details": ["Worked closely with the Product Managers to write and review User Requirements", "Ported z80-based calculator emulators from Java and C to Javascript", "Pilots involving 800k users without any reported issues.", "https://education.ti.com/en/us/about/press-center/press-listing-content-module/6-20-2013-ccss"],
-            "title": "ExamCalcs\t for Texas Instruments via Dextra Technologies - 2013-15"
+        }, {
+            "details": ["Worked closely with the Product Managers to write and review User Requirements", "Ported and implemented z80-based calculator emulators to html5.", "Pilots involving 800k users without any reported issues.", "https://education.ti.com/en/us/about/press-center/press-listing-content-module/6-20-2013-ccss"],
+            "title": "ExamCalcs for Texas Instruments via Dextra Technologies - 2013-15"
         }, {
             "details": ["Ported iPhone implementation of OpenGL game to Brew", "https://itunes.apple.com/us/app/3d-rollercoaster-rush/id319575672"],
-            "title": "Rollercoaster game for Digital Chocolate 2010"
+            "title": "Rollercoaster Rush for Digital Chocolate 2010"
         }, {
-            "details": ["Wrote pedometer and fitness tips application for the iPhone"],
-            "title": "iFit for Lemonquest 2009"
-        }, {
-            "details": ["https://itunes.apple.com/us/app/50-chinese-words-learn-to/id312982180?mt=8", "Wrote an application that reproduces the strokes necessary for writing chinese characters as well as playing their sound", "Developed a Chinese character writing tutor for the iPhone"],
+            "details": ["Wrote an application that reproduces the strokes necessary for writing chinese characters as well as playing their sound", "Developed a Chinese character writing tutor for the iPhone", "https://itunes.apple.com/us/app/50-chinese-words-learn-to/id312982180?mt=8"],
             "title": "50 Chinese Words for One Element - 2009"
         }, {
-            "details": ["Wrote graphics engine and all art for a card game targeted towards the iPhone."],
+            "details": ["Wrote graphics engine using C and OpenGL as well as all art for a card game targeted towards the iPhone.", "Ported the directx graphics engine impementation to the iPhone's OpenGL ES framework"],
             "title": "Big 2 Poker"
         }, {
-            "details": ["Wrote a relegious-focused application that shows images, plays sounds and uses the accelerometer to interact with the user."],
+            "details": ["Wrote a relegious-focused application that shows images, plays sounds and uses the iPhone's accelerometer to interact with the user."],
             "title": "iAarti for Katha Films 2008-09"
         }, {
-            "details": ["Ported the directx graphics engine impementation to the iPhone's OpenGL ES framework", "Implemented 3d audio library that maps the user's location to reproduce sounds in a 3d-mapped manner.", "Translated levels originally designed for desktop/mouse to be usable on a touch device", "Game was awarded a bronze medal by pocketgamer.uk http://www.pocketgamer.co.uk/r/iPhone/Circulate+%28iPhone%29/review.asp?c=11151&tab=tips"],
+            "details": ["Ported the directx impementation to the iPhone's OpenGL ES framework", "Translated levels originally designed for desktop/mouse to be usable on a touch device", "Game was awarded a bronze medal by pocketgamer.uk", " http://www.pocketgamer.co.uk/r/iPhone/Circulate+%28iPhone%29/review.asp?c=11151&tab=tips"],
             "title": "Circulate for Lemonquest 2009"
         }, {
-            "details": ["Ported the directx impementation to the iPhone's OpenGL ES framework"],
+            "details": ["Ported the directx impementation to the iPhone's OpenGL ES framework", "Implemented 3d audio library that maps the user's location to reproduce sounds in a 3d-mapped manner using the OpenAL library for iPhone."],
             "title": "Circulate Prologue for Lemonquest 2008"
         }, {
-            "details": ["Developed and ported first prototype for the brickbreaker game using the celestial framework for iPhone", "After getting the first company-wide prototype to work, our office was able to take on more projects than what would have originally been assigned to us."],
+            "details": ["Developed and ported first prototype for the brickbreaker game using the Celestial framework for iPhone", "After getting the first company-wide prototype to work, our office was able to take on more projects than what would have originally been assigned to us."],
             "title": "Blockbreaker for iPhone for Gameloft - 2007-08"
         }]
     }
