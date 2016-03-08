@@ -319,7 +319,7 @@ var data2 = {
             "details": ["Wrote a relegious-focused application that shows images, plays sounds and uses the accelerometer to interact with the user."],
             "title": "iAarti for Katha Films 2008-09"
         }, {
-            "details": ["Ported the directx graphics engine impementation to the iPhone's OpenGL ES framework", "Implemente 3d audio library that maps the user's location to reproduce sounds in a 3d-mapped manner.", "Translated levels originally designed for desktop/mouse to be usable on a touch device", "Game was awarded a bronze medal by pocketgamer.uk http://www.pocketgamer.co.uk/r/iPhone/Circulate+%28iPhone%29/review.asp?c=11151&tab=tips"],
+            "details": ["Ported the directx graphics engine impementation to the iPhone's OpenGL ES framework", "Implemented 3d audio library that maps the user's location to reproduce sounds in a 3d-mapped manner.", "Translated levels originally designed for desktop/mouse to be usable on a touch device", "Game was awarded a bronze medal by pocketgamer.uk http://www.pocketgamer.co.uk/r/iPhone/Circulate+%28iPhone%29/review.asp?c=11151&tab=tips"],
             "title": "Circulate for Lemonquest 2009"
         }, {
             "details": ["Ported the directx impementation to the iPhone's OpenGL ES framework"],

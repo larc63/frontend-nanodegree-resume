@@ -104,27 +104,34 @@ td, th { padding: 5px; }
 }
 
 @media only print {
+    body{
+        font-size: 11px;
+    }
     h1 {
-        font-size: 12px;
+        font-size: 20px;
     }
 
     h2 {
-        font-size: 11px;
+        font-size: 16px;
         margin: 0 0 0 0;
     }
 
     h3 {
-        font-size: 10px;
+        font-size: 14px;
         margin: 1px 0 0 0;
     }
 
     h4 {
         font-style: bold;
-        font-size: 9px;
+        font-size: 12px;
     }
     .container {
         margin-top: 1px;
         padding:0 4px 0 8px;
+    }
+    .title-name {
+        font-size: 28px;
+        padding:0 2em 0 2em;
     }
     .title-role {
         display: none;
@@ -137,6 +144,9 @@ td, th { padding: 5px; }
     }
     .title-contact-info-for-print{
         display: inline;
+    }
+    .project-name{
+        font-size: 13px;
     }
     .course-title{
         display: none;
