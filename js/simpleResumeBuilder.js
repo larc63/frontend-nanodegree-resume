@@ -13,11 +13,13 @@ var Course = function (data) {
 
 var School = function (data) {
     this.name = data;
+//    this.date = data.date;
 };
 
 var Project = function (data) {
     var self = this;
     this.name = data.title;
+    this.date = data.date;
     this.details = ko.observableArray([]);
     if (data.details) {
         data.details.forEach(function (d) {

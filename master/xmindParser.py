@@ -36,7 +36,15 @@ for topic in topics:
         jobs = []
         for job in innerTopics:
             jobTitle = job.find("xmind:title", ns)
-            jobs.append(jobTitle.text)
+            jobDict = {}
+            jobDict["name"] = jobTitle.text
+            children = project.find("xmind:children", ns)
+            if children:
+                jobTopics = children[0]
+                idx = 0
+                jobTopic = jobTopics[0]
+                jobDict["date"] = projectTopic.find("xmind:title", ns).text
+            jobs.append(jobDict)
         output["work_experience"] = {"jobs" : jobs}
     elif title == "Skills":
         children = topic.find("xmind:children", ns)
@@ -92,9 +100,14 @@ for topic in topics:
             if children:
                 projectTopics = children[0]
                 projectDetails = []
-                for projectTopic in projectTopics:
-                    projectTopicTitle = projectTopic.find("xmind:title", ns)
-                    projectDetails.append(projectTopicTitle.text)
+                idx = 0
+                for  projectTopic in projectTopics:
+                    if idx == 0:
+                        projectDictionary["date"] = projectTopic.find("xmind:title", ns).text
+                    else:
+                        projectTopicTitle = projectTopic.find("xmind:title", ns)
+                        projectDetails.append(projectTopicTitle.text)
+                    idx += 1
                 projectDictionary["details"] = projectDetails
             projects.append(projectDictionary)
         output["projects"] = {"projects" : projects}
