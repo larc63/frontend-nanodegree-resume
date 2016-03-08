@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width" />
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <script src="js/knockout-3.0.0.js"></script>
     <link href="http://fonts.googleapis.com/css?family=VT323" rel="stylesheet" type="text/css">
@@ -15,25 +16,43 @@
 
 <body>
     <div id="main" class="container">
-        <div class="col-md-12">
-            <h1 data-bind="text: name" class="title-name"></h1>
-            <div class="col-md-12">
-                <div data-bind="text: role" class="col-md-4 title-role"></div>
-                <div class="col-md-8 title-contact-info">
-                    <a data-bind="text: email, attr: {href: emailurl}"></a>&nbsp;/
-                    <a data-bind="text: mobile, attr: {href: mobileurl}"></a>&nbsp;/
-                    <a data-bind="text: twitter, attr: {href: twitterurl}"></a>&nbsp;/
-                    <a data-bind="text: linkedin, attr: {href: linkedinurl}"></a>&nbsp;/
-                    <a data-bind="text: github, attr: {href: githuburl}"></a>
-                </div>
-                <div class="col-md-8 title-contact-info-for-print">
-                    <span data-bind="text: email"></span>&nbsp;/
-                    <span data-bind="text: mobile"></span>&nbsp;/
-                    <span data-bind="text: twitterurl"></span>&nbsp;/
-                    <span data-bind="text: linkedinurl"></span>&nbsp;/
-                    <span data-bind="text: githuburl"></span>
-                </div>
+        <div class="col-xs-12">
+            <!--            <div class="col-md-1"></div>-->
+            <div class="col-xs-6">
+                <h1 data-bind="text: name" class="title-name"></h1>
+                <div data-bind="text: role" class="title-role"></div>
             </div>
+<!--            <div class="col-sm-4 title-contact-info"></div>-->
+            <div class="col-xs-6 title-contact-info-for-print">
+                <i class="fa fa-envelope-square"></i>: <span data-bind="text: email"></span>
+                <br>
+                <i class="fa fa-phone-square"></i>: <span data-bind="text: mobile"></span>
+                <br>
+                <i class="fa fa-twitter"></i>: @<span data-bind="text: twitter"></span>
+                <br>
+                <i class="fa fa-linkedin-square"></i>: <span data-bind="text: linkedinurl"></span>
+                <br>
+                <i class="fa fa-github-square"></i>: <span data-bind="text: githuburl"></span>
+                <br>
+            </div>
+            <div class="col-xs-6 title-contact-info">
+                <i class="fa fa-envelope-square"></i>:
+                <a data-bind="text: email, attr: {href: emailurl}"></a>
+                <br>
+                <i class="fa fa-phone-square"></i>:
+                <a data-bind="text: mobile, attr: {href: mobileurl}"></a>
+                <br>
+                <i class="fa fa-twitter"></i>:
+                <a data-bind="text: '@' + twitter(), attr: {href: twitterurl}"></a>
+                <br>
+                <i class="fa fa-linkedin-square"></i>:
+                <a data-bind="text: linkedin, attr: {href: linkedinurl}"></a>
+                <br>
+                <i class="fa fa-github-square"></i>:
+                <a data-bind="text: github, attr: {href: githuburl}"></a>
+                <br>
+            </div>
+            <!--            <div class="col-md-1"></div>-->
         </div>
         <hr>
         <div class="col-md-12">
@@ -44,7 +63,7 @@
                 </tr>
             </table>
         </div>
-        
+
         <div class="col-md-12">
             <h2>Projects</h2>
             <div data-bind="foreach: projects" class="col-md-12">
@@ -55,7 +74,7 @@
             </div>
         </div>
 
-        
+
         <div class="col-md-12">
             <h2>Relevant Experience</h2>
             <div data-bind="foreach: jobs" class="col-md-12">

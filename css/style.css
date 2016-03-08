@@ -58,6 +58,10 @@ th {
     font-style: italic;
 }
 
+.title-role {
+    color: #f2511b
+}
+
 .title-role,
 .title-contact-info,
 .title-contact-info-for-print {
@@ -97,8 +101,8 @@ th {
 }
 
 .skills {
-    width: 90%;
-    margin-left: 2em;
+    width: 95%;
+    margin-left: 1em;
 }
 
 .education-school {}
@@ -141,16 +145,18 @@ th {
         margin-top: 1px;
         padding: 0 4px 0 8px;
     }
-    .col-md-12 {
+    .col-md-12,
+    .col-sm-12,
+    .col-xs-12 {
         margin-bottom: 2px;
     }
     .title-name {
         margin-top: 5px;
         font-size: 28px;
-        padding: 0 2em 0 2em;
+        padding: 0 1em 0 1em;
     }
     .title-role {
-        display: none;
+        color: #f2511b
     }
     .title-contact-info-for-print {
         font-size: 10px;
@@ -159,7 +165,7 @@ th {
         display: none;
     }
     .title-contact-info-for-print {
-        display: inline;
+        display: block;
     }
     .project-name {
         font-size: 13px;
@@ -168,6 +174,6 @@ th {
         display: none;
     }
     .course-title-for-print {
-        display: inline;
+        display: block;
     }
 }
