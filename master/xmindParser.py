@@ -38,12 +38,12 @@ for topic in topics:
             jobTitle = job.find("xmind:title", ns)
             jobDict = {}
             jobDict["name"] = jobTitle.text
-            children = project.find("xmind:children", ns)
+            children = job.find("xmind:children", ns)
             if children:
                 jobTopics = children[0]
                 idx = 0
                 jobTopic = jobTopics[0]
-                jobDict["date"] = projectTopic.find("xmind:title", ns).text
+                jobDict["date"] = jobTopic.find("xmind:title", ns).text
             jobs.append(jobDict)
         output["work_experience"] = {"jobs" : jobs}
     elif title == "Skills":

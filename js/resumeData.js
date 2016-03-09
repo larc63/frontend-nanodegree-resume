@@ -291,7 +291,19 @@ var data2 = {
         "courses": ["iOS Persistence and Core Data at Udacity (2015)", "iOS Networking with Swift at Udacity (2015)", "UIKit Fundamentals I at Udacity (2015)", "UIKit Fundamentals II at Udacity (2015)", "Intro to iOS App Development Swift at Udacity (2015)"]
     },
     "work_experience": {
-        "jobs": ["System Engineer for Dextra Technologies, November 2010 - present", "Game Engineering Manager for Digital Chocolate June 2009 to October 2010", "iPhone Lead Programmer for Lemonquest April 2008 to July 2009", "Game Programmer for Gameloft August 2005 to March 2008"]
+        "jobs": [{
+            "date": "November 2010 - present",
+            "name": "System Engineer for Dextra Technologies"
+        }, {
+            "date": "June 2009 to October 2010",
+            "name": "Game Engineering Manager for Digital Chocolate"
+        }, {
+            "date": "April 2008 to July 2009",
+            "name": "iPhone Lead Programmer for Lemonquest"
+        }, {
+            "date": "August 2005 to March 2008",
+            "name": "Game Programmer for Gameloft"
+        }]
     },
     "education": {
         "schools": ["Udacity iOS developer nanodegree", "Udacity Front-end developer nanodegree", "CICESE M. Sc. Electronics and Telecommunications", "ITESM Bs. in Electronic Systems Engineering"]
@@ -306,15 +318,11 @@ var data2 = {
             "details": ["Worked closely with the Product Managers to write and review User Requirements", "Ported and implemented z80-based calculator emulators to html5.", "Pilots involving 800k users without any reported issues.", "https://education.ti.com/en/us/about/press-center/press-listing-content-module/6-20-2013-ccss"],
             "title": "ExamCalcs for Texas Instruments via Dextra Technologies"
         }, {
-            "date": "2010",
-            "details": ["Ported iPhone implementation of OpenGL game to Brew", "https://itunes.apple.com/us/app/3d-rollercoaster-rush/id319575672"],
-            "title": "Rollercoaster Rush for Digital Chocolate"
-        }, {
             "date": "2009",
             "details": ["Wrote an application that reproduces the strokes necessary for writing chinese characters as well as playing their sound", "Developed a Chinese character writing tutor for the iPhone", "https://itunes.apple.com/us/app/50-chinese-words-learn-to/id312982180?mt=8"],
             "title": "50 Chinese Words for One Element"
         }, {
-            "date": "2008 - 09",
+            "date": "2008 - 2009",
             "details": ["Wrote graphics engine using C and OpenGL as well as all art for a card game targeted towards the iPhone.", "Ported the directx graphics engine impementation to the iPhone's OpenGL ES framework"],
             "title": "Big 2 Poker "
         }, {
