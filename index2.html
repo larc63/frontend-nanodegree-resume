@@ -24,32 +24,27 @@
             </div>
             <!--            <div class="col-sm-4 title-contact-info"></div>-->
             <div class="col-xs-6 title-contact-info-for-print">
-                <i class="fa fa-envelope-square"></i>: <span data-bind="text: email"></span>
+                <span data-bind="text: linkedinurl"></span> <i class="fa fa-linkedin-square"></i>
                 <br>
-                <i class="fa fa-phone-square"></i>: <span data-bind="text: mobile"></span>
+                <span data-bind="text: githuburl"></span> <i class="fa fa-github-square"></i>
                 <br>
-                <i class="fa fa-twitter"></i>: @<span data-bind="text: twitter"></span>
+                <span data-bind="text: email"></span> <i class="fa fa-envelope-square"></i>
                 <br>
-                <i class="fa fa-linkedin-square"></i>: <span data-bind="text: linkedinurl"></span>
-                <br>
-                <i class="fa fa-github-square"></i>: <span data-bind="text: githuburl"></span>
+                <span data-bind="text: mobile"></span> <i class="fa fa-phone-square"></i>
+                <br> @
+                <span data-bind="text: twitter"></span> <i class="fa fa-twitter"></i>
                 <br>
             </div>
             <div class="col-xs-6 title-contact-info">
-                <i class="fa fa-envelope-square"></i>:
-                <a data-bind="text: email, attr: {href: emailurl}"></a>
+                <a data-bind="text: email, attr: {href: emailurl}"></a> <i class="fa fa-envelope-square"></i>
                 <br>
-                <i class="fa fa-phone-square"></i>:
-                <a data-bind="text: mobile, attr: {href: mobileurl}"></a>
+                <a data-bind="text: mobile, attr: {href: mobileurl}"></a> <i class="fa fa-phone-square"></i>
                 <br>
-                <i class="fa fa-twitter"></i>:
-                <a data-bind="text: '@' + twitter(), attr: {href: twitterurl}"></a>
+                <a data-bind="text: '@' + twitter(), attr: {href: twitterurl}"></a> <i class="fa fa-twitter"></i>
                 <br>
-                <i class="fa fa-linkedin-square"></i>:
-                <a data-bind="text: linkedin, attr: {href: linkedinurl}"></a>
+                <a data-bind="text: linkedin, attr: {href: linkedinurl}"></a> <i class="fa fa-linkedin-square"></i>
                 <br>
-                <i class="fa fa-github-square"></i>:
-                <a data-bind="text: github, attr: {href: githuburl}"></a>
+                <a data-bind="text: github, attr: {href: githuburl}"></a> <i class="fa fa-github-square"></i>
                 <br>
             </div>
             <!--            <div class="col-xs-1"></div>-->
@@ -67,13 +62,11 @@
         <div class="col-xs-12">
             <h2>Projects</h2>
             <div data-bind="foreach: projects" class="col-xs-12">
-                <div class="col-xs-12">
-                    <div class="col-xs-10">
-                        <h3 data-bind="text: name" class="project-name"></h3>
-                    </div>
-                    <div class="col-xs-2">
-                        <div data-bind="text: date" class="project-date"></div>
-                    </div>
+                <div class="col-xs-10">
+                    <h3 data-bind="text: name" class="project-name"></h3>
+                </div>
+                <div class="col-xs-2">
+                    <div data-bind="text: date" class="project-date"></div>
                 </div>
                 <div class="col-xs-12">
                     <ul data-bind="foreach: details">
