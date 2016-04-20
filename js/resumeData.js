@@ -285,7 +285,7 @@ var data2 = {
         "linkedin": "larc63"
     },
     "skills": {
-        "skills": ["Java", "Swift", "JavaScript", "Objective-C", "iOS", "Git", "Scrum"]
+        "skills": ["Java", "Swift", "JavaScript", "Objective-C", "C/C++"]
     },
     "courses": {
         "courses": ["iOS Persistence and Core Data at Udacity (2015)", "iOS Networking with Swift at Udacity (2015)", "UIKit Fundamentals I at Udacity (2015)", "UIKit Fundamentals II at Udacity (2015)", "Intro to iOS App Development Swift at Udacity (2015)"]

@@ -5,13 +5,16 @@
 }
 
 h1 {
-    font-size: 40px;
+    font-size: 38px;
 }
 
 h2 {
     font-style: bold;
     font-size: 20px;
     margin: 5px 0 0 0;
+    border-bottom-color: gray;   
+    border-bottom-width: 1px;
+    border-bottom-style: solid;  
 }
 
 h3 {
@@ -63,6 +66,12 @@ th {
     font-size: 20px;
 }
 
+.title-contact-info{
+    font-size: 50px;
+    margin-top: 20px;
+    color: royalblue;
+}
+
 .title-contact-info,
 .title-contact-info-for-print {
     text-align: right;
@@ -88,7 +97,7 @@ th {
 }
 .project-date {
     text-align: right;
-    font-size: 12px;
+    font-size: 14px;
     font-style: italic;
 }
 
@@ -101,6 +110,7 @@ th {
 .skills {
     width: 95%;
     margin-left: 1em;
+    text-align: center;
 }
 
 .education-school {}
@@ -121,7 +131,7 @@ th {
 
 @media only print {
     body {
-        font-size: 11px;
+        font-size: 10px;
     }
     h1 {
         font-size: 20px;

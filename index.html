@@ -1,103 +1,116 @@
 <!DOCTYPE html>
 
 <head>
-    <meta charset='utf-8' />
-    <meta name='viewport' content='width=device-width'>
-    <link href='css/style.css' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel='stylesheet' type='text/css' href='css/bootstrap.css'>
-    <script src='js/knockout-3.0.0.js'></script>
-    <link href='http://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Wallpoet' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script src="js/knockout-3.0.0.js"></script>
+    <link href="http://fonts.googleapis.com/css?family=VT323" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Wallpoet" rel="stylesheet" type="text/css">
     <title>Luis Antonio Rodríguez Condit</title>
 </head>
 
 <body>
-    <div id='main' class='container'>
-
-        <div class='col-md-12'>
-            <h1 data-bind='text: name' class='title-name'></h1>
-            <div class='col-md-12'>
-                <div data-bind='text: role' class='col-md-6 title-role'></div>
-                <div class='col-md-6 title-contact-info'>
-                    <a data-bind='text: email, attr: {href: emailurl}'></a>&nbsp;/
-                    <a data-bind='text: mobile, attr: {href: mobileurl}'></a>
-                </div>
-                <div class='col-md-6 title-contact-info-for-print'>
-                    <span data-bind='text: email'></span>&nbsp;/
-                    <span data-bind='text: mobile'></span>
-                </div>
-                <hr>
+    <div id="main" class="container">
+        <div class="col-xs-12">
+            <!--            <div class="col-xs-1"></div>-->
+            <div class="col-xs-6">
+                <h1 data-bind="text: name" class="title-name"></h1>
+                <div data-bind="text: role" class="title-role"></div>
             </div>
+            <!--            <div class="col-sm-4 title-contact-info"></div>-->
+            <div class="col-xs-6 title-contact-info-for-print">
+                <span data-bind="text: linkedinurl"></span> <i class="fa fa-linkedin-square"></i>
+                <br>
+                <span data-bind="text: githuburl"></span> <i class="fa fa-github-square"></i>
+                <br>
+                <span data-bind="text: email"></span> <i class="fa fa-envelope-square"></i>
+                <br>
+                <span data-bind="text: mobile"></span> <i class="fa fa-phone-square"></i>
+                <br> @
+                <span data-bind="text: twitter"></span> <i class="fa fa-twitter-square"></i>
+                <br>
+            </div>
+            <div class="col-xs-6 title-contact-info">
+                <a data-bind="attr: {href: emailurl}" class="fa fa-envelope-square"></a>
+                <a data-bind="attr: {href: mobileurl}" class="fa fa-phone-square"></a>
+                <a data-bind="attr: {href: twitterurl}" class="fa fa-twitter-square"></a>
+                <a data-bind="attr: {href: linkedinurl}" class="fa fa-linkedin-square"></a>
+                <a data-bind="attr: {href: githuburl}" class="fa fa-github-square"></a>
+            </div>
+            <!--            <div class="col-xs-1"></div>-->
         </div>
-        <div class='col-md-12'>
+        <hr>
+        <div class="col-xs-12">
             <h2>Skills</h2>
-            <table data-bind='foreach: skills' class='col-md-12 skills'>
-                <tr data-bind='foreach: $data'>
-                    <td data-bind='text: skill'></td>
+            <table data-bind="foreach: skills" class="col-xs-12 skills">
+                <tr data-bind="foreach: $data">
+                    <td data-bind="text: skill"></td>
                 </tr>
             </table>
         </div>
-        <div class='col-md-12'>
-            <h2>Work Experience</h2>
-            <div data-bind='foreach: jobs' class='col-md-12'>
-                <h3><span data-bind='text: employer' class='work-employer'></span> - <span data-bind='text: title' class='work-title'></span></h3>
-                <p data-bind='text: dates' class='work-dates'></p>
-                <p data-bind='text: brief' class='work-brief'></p>
-                <p data-bind='text: description' class='work-description'></p>
-                <ul data-bind='foreach: roles' class='work-roles'>
-                    <li data-bind='text: role'></li>
-                </ul>
-            </div>
-        </div>
-        <!--
-        <div class='col-md-12'>
-            <h2>Projects</h2>
-            <div data-bind='foreach: projects' class='col-md-12'>
-                <h3 data-bind='text: name' class='project-name'></h3>
-                <p data-bind='text: description' class='project-description'></p>
-            </div>
-        </div>
--->
 
-        <div class='col-md-12'>
-            <h2>Education</h2>
-            <div data-bind='foreach: schools' class='col-md-6'>
-                <div class='col-md-6'>
-                    <a data-bind='text: name, attr:{href: url}' class='education-school'></a>
-                    <span data-bind='text: name' class='education-school-for-print'></span></div>
-                <div class='col-md-6'>
-                    <span data-bind='text: degree'></span> in <span data-bind='text: major'></span>
+        <div class="col-xs-12">
+            <h2>Projects</h2>
+            <div data-bind="foreach: projects" class="col-xs-12">
+                <div class="col-xs-10">
+                    <h3 data-bind="text: name" class="project-name"></h3>
+                </div>
+                <div class="col-xs-2">
+                    <div data-bind="text: date" class="project-date"></div>
+                </div>
+                <div class="col-xs-12">
+                    <ul data-bind="foreach: details">
+                        <li data-bind="text: detail" class="project-description"></li>
+                    </ul>
                 </div>
             </div>
         </div>
+
+
+        <div class="col-xs-12">
+            <h2>Relevant Experience</h2>
+            <div data-bind="foreach: jobs" class="col-xs-12">
+                <div class="col-xs-12">
+                    <div class="col-xs-8">
+                        <div data-bind="text: name" class="work-employer"></div>
+                    </div>
+                    <div class="col-xs-4">
+                        <div data-bind="text: date" class="project-date"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="col-xs-12">
+            <h2>Education</h2>
+            <div data-bind="foreach: schools" class="col-xs-12">
+                <div class="col-xs-12">
+                    <span data-bind="text: name" class="education-school"></span>
+                </div>
+            </div>
+        </div>
+
         <!--
-        <div class='col-md-12'>
-            <h2>Education</h2>
-            <div data-bind='foreach: schools' class='col-md-12'>
-                <h3> <a data-bind='text: name, attr:{href: url}' class='education-school'></a></h3>
-                <h3> <span data-bind='text: name' class='education-school-for-print'></span></h3>
-                <div data-bind='text: location' class='col-md-4'></div>
-                <div class='col-md-4'></div>
-                <div data-bind='text: dates' class='col-md-4'></div>
-                <div class='col-md-12'>
-                    <span data-bind='text: degree'></span> in <span data-bind='text: major'></span>
-                </div>
-            </div>
-        </div>
--->
-        <div class='col-md-12'>
+
+        <div class="col-xs-12">
             <h2>Online Courses</h2>
-            <table data-bind='foreach: coursesDisplay' class='col-md-12 courses-box'>
-                <tr data-bind='foreach: $data'>
-                    <td data-bind='with: course'>
-                        <a data-bind='text: title, attr:{href: certificate}' class='course-title'></a><span data-bind='text: title' class='course-title-for-print'></span>&nbsp;from <span data-bind='text: school'></span> - <span data-bind='text: dates'></span>
+            <table data-bind="foreach: coursesDisplay" class="col-xs-12 courses-box">
+                <tr data-bind="foreach: $data">
+                    <td data-bind="with: course">
+                        <a data-bind="text: title, attr:{href: certificate}" class="course-title"></a><span data-bind="text: title" class="course-title-for-print"></span>&nbsp;from <span data-bind="text: school"></span> - <span data-bind="text: dates"></span>
                     </td>
                 </tr>
             </table>
         </div>
+-->
     </div>
-    <script src='js/resumeData.js'></script>
-    <script src='js/resumeBuilder.js'></script>
+    <script src="js/resumeData.js"></script>
+    <script src="js/simpleResumeBuilder.js"></script>
 </body>
