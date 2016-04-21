@@ -177,6 +177,11 @@ th {
     .project-name {
         font-size: 13px;
     }
+    .project-date {
+        text-align: right;
+        font-size: 10px;
+        font-style: italic;
+    }
     .course-title {
         display: none;
     }
