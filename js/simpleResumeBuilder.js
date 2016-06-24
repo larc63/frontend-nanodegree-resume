@@ -134,6 +134,9 @@ var ViewModel = function () {
 
         return result;
     }, this);
+    
+    
+    XMindParser();
 };
 
 ViewModel.prototype.resizeListener = function () {
@@ -148,30 +151,30 @@ window.addEventListener('resize', function () {
 }, true);
 
 
-window.addEventListener('load', function () {
-    console.log("type the konami code!");
-});
-var secret = ["Up", "Up", "Down", "Down", "Left", "Right", "Left", "Right", "U+0042", "U+0041", "U+0042", "U+0041"];
-var input = [];
-var timer;
-window.addEventListener('keyup', function (e) {
-    console.log(e.keyIdentifier);
-    var index = input.length;
-    if (e.keyIdentifier === secret[index]) {
-        input.push(e.keyIdentifier);
-        console.log(input);
-    }
-    window.clearTimeout(timer);
-    timer = window.setTimeout(function () {
-        input = [];
-    }, 500);
-    if (input.length === secret.length) {
-        var oldlink = document.getElementsByTagName("link").item(0);
-        var newlink = document.createElement("link");
-        newlink.setAttribute("rel", "stylesheet");
-        newlink.setAttribute("type", "text/css");
-        newlink.setAttribute("href", "css/alternate-style.css");
-        document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
-
-    }
-});
+//window.addEventListener('load', function () {
+//    console.log("type the konami code!");
+//});
+//var secret = ["Up", "Up", "Down", "Down", "Left", "Right", "Left", "Right", "U+0042", "U+0041", "U+0042", "U+0041"];
+//var input = [];
+//var timer;
+//window.addEventListener('keyup', function (e) {
+//    console.log(e.keyIdentifier);
+//    var index = input.length;
+//    if (e.keyIdentifier === secret[index]) {
+//        input.push(e.keyIdentifier);
+//        console.log(input);
+//    }
+//    window.clearTimeout(timer);
+//    timer = window.setTimeout(function () {
+//        input = [];
+//    }, 500);
+//    if (input.length === secret.length) {
+//        var oldlink = document.getElementsByTagName("link").item(0);
+//        var newlink = document.createElement("link");
+//        newlink.setAttribute("rel", "stylesheet");
+//        newlink.setAttribute("type", "text/css");
+//        newlink.setAttribute("href", "css/alternate-style.css");
+//        document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
+//
+//    }
+//});
