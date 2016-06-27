@@ -37,6 +37,8 @@ var Job = function (data) {
 var ViewModel = function () {
     var self = this,
         j;
+
+    XMindParser(this);
     this.dummyObservable = ko.observable();
     this.name = ko.observable(data.bio.name);
     this.role = ko.observable(data.bio.role);
@@ -44,7 +46,7 @@ var ViewModel = function () {
     this.emailurl = ko.computed(function () {
         return 'mailto:' + this.email();
     }, this);
-    this.mobile = ko.observable(data2.bio.phone);
+    this.mobile = ko.observable();
     this.mobileurl = ko.computed(function () {
         return 'callto:' + this.mobile();
     }, this);
@@ -134,9 +136,27 @@ var ViewModel = function () {
 
         return result;
     }, this);
-    
-    
-    XMindParser();
+    this.refreshData = function () {
+        self.email(data2.bio.email);
+        self.mobile(data2.bio.phone);
+        self.twitter(data2.bio.twitter);
+        self.linkedin(data2.bio.linkedin);
+        self.github(data2.bio.github);
+        self.dummyObservable.notifySubscribers();
+        self.projects.removeAll();
+        for (var p in data2.projects.projects) {
+            self.projects.push(new Project(data2.projects.projects[p]));
+        }
+        self.jobs.removeAll();
+        for (j in data2.work_experience.jobs) {
+            self.jobs.push(new Job(data2.work_experience.jobs[j]));
+        }
+
+        self.schools.removeAll();
+        for (p in data2.education.schools) {
+            self.schools.push(new School(data2.education.schools[p]));
+        }
+    };
 };
 
 ViewModel.prototype.resizeListener = function () {
