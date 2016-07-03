@@ -120,6 +120,16 @@ function XMindParser(vm) {
             data2.education.schools.push(titleForTopic);
 
         });
+        
+        $bio = parser.$xml.find('topic>title').filter(function () {
+            return $(this).text() == "Courses";
+        }).parent();
+        data2.courses.courses = [];
+        $bio.children("children").children("topics").children("topic").each(function () {
+            var titleForTopic = $(this).children("title").text();
+            data2.courses.courses.push(titleForTopic);
+
+        });
         vm.refreshData();
     };
 

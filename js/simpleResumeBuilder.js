@@ -117,7 +117,7 @@ var ViewModel = function () {
             colLength = (window.innerWidth / 750) >> 0;
         this.dummyObservable();
         //loop through items and push each item to a row array that gets pushed to the final result
-        for (var i = 0, j = data.education.onlineCourses.length; i < j; i++) {
+        for (var i = 0, j = data2.courses.courses.length; i < j; i++) {
             if (i % colLength === 0) {
                 if (row) {
                     result.push(row);
@@ -125,7 +125,7 @@ var ViewModel = function () {
                 row = [];
             }
             row.push({
-                course: data.education.onlineCourses[i]
+                course: data2.courses.courses[i]
             });
         }
 
@@ -155,6 +155,10 @@ var ViewModel = function () {
         self.schools.removeAll();
         for (p in data2.education.schools) {
             self.schools.push(new School(data2.education.schools[p]));
+        }
+        self.courses.removeAll();
+        for (p in data2.courses.courses) {
+            self.courses.push(new Course(data2.courses.courses[p]));
         }
     };
 };
