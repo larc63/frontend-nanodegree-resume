@@ -3,6 +3,8 @@
 /* global data2*/
 /* global window*/
 /* global document*/
+/* global isVitae*/
+
 var Course = function (data) {
     this.title = data.title;
     this.school = data.school;
@@ -108,9 +110,74 @@ var ViewModel = function () {
     }
 
     self.courses = ko.observableArray([]);
-    for (p in data.education.onlineCourses) {
-        this.courses.push(new Course(data.education.onlineCourses[p]));
+
+    if (isVitae) {
+        self.additionalJobs = ko.observableArray([]);
+        self.additionalSchools = ko.observableArray([]);
+        self.additionalCourses = ko.observableArray([]);
+        self.additionalProjects = ko.observableArray([]);
+        for (p in data2.projects.additionalProjects) {
+            this.additionalProjects.push(new Project(data2.projects.additionalProjects[p]));
+        }
+
+        this.additionalCoursesDisplay = ko.computed(function () {
+            var result = [],
+                row = [],
+                colLength = (window.innerWidth / 750) >> 0;
+            this.dummyObservable();
+            //loop through items and push each item to a row array that gets pushed to the final result
+            if (data2.courses.additionalCourses) {
+                for (var i = 0, j = data2.courses.additionalCourses.length; i < j; i++) {
+                    if (i % colLength === 0) {
+                        if (row) {
+                            result.push(row);
+                        }
+                        row = [];
+                    }
+                    row.push({
+                        course: data2.courses.additionalCourses[i]
+                    });
+                }
+
+                //push the final row  
+                if (row) {
+                    result.push(row);
+                }
+            }
+
+            return result;
+        }, this);
+        this.additionalSkills = ko.computed(function () {
+            var result = [],
+                row,
+                colLength = (window.innerWidth / 180) >> 0;
+
+            this.dummyObservable();
+
+            //loop through items and push each item to a row array that gets pushed to the final result
+            if (data2.skills.additionalSkills) {
+                for (var i = 0, j = data2.skills.additionalSkills.length; i < j; i++) {
+                    if (i % colLength === 0) {
+                        if (row) {
+                            result.push(row);
+                        }
+                        row = [];
+                    }
+                    row.push({
+                        skill: data2.skills.additionalSkills[i]
+                    });
+                }
+
+                //push the final row  
+                if (row) {
+                    result.push(row);
+                }
+            }
+
+            return result;
+        }, this);
     }
+
     this.coursesDisplay = ko.computed(function () {
         var result = [],
             row = [],
@@ -159,6 +226,24 @@ var ViewModel = function () {
         self.courses.removeAll();
         for (p in data2.courses.courses) {
             self.courses.push(new Course(data2.courses.courses[p]));
+        }
+        if (isVitae) {
+            self.additionalProjects.removeAll();
+            for (p in data2.projects.additionalProjects) {
+                self.additionalProjects.push(new Project(data2.projects.additionalProjects[p]));
+            }
+            self.additionalCourses.removeAll();
+            for (p in data2.courses.additionalCourses) {
+                self.additionalCourses.push(new Course(data2.courses.additionalCourses[p]));
+            }
+            self.additionalJobs.removeAll();
+            for (p in data2.work_experience.additionalJobs) {
+                self.additionalJobs.push(new Job(data2.work_experience.additionalJobs[p]));
+            }
+            self.additionalSchools.removeAll();
+            for (p in data2.education.additionalSchools) {
+                self.additionalSchools.push(new School(data2.education.additionalSchools[p]));
+            }
         }
     };
 };

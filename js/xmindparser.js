@@ -13,6 +13,8 @@
 /* global Uint8Array */
 /* global setTimeout */
 /* global XMLHttpRequest */
+/* global data2 */
+/* global isVitae */
 
 function XMindParser(vm) {
     var parser = this;
@@ -78,7 +80,7 @@ function XMindParser(vm) {
             data2.skills.skills.push($(this).children("title").text());
         });
 
-        var $bio = parser.$xml.find('topic>title').filter(function () {
+        $bio = parser.$xml.find('topic>title').filter(function () {
             return $(this).text() == "Projects";
         }).parent();
 
@@ -118,9 +120,8 @@ function XMindParser(vm) {
         $bio.children("children").children("topics").children("topic").each(function () {
             var titleForTopic = $(this).children("title").text();
             data2.education.schools.push(titleForTopic);
-
         });
-        
+
         $bio = parser.$xml.find('topic>title').filter(function () {
             return $(this).text() == "Courses";
         }).parent();
@@ -128,8 +129,68 @@ function XMindParser(vm) {
         $bio.children("children").children("topics").children("topic").each(function () {
             var titleForTopic = $(this).children("title").text();
             data2.courses.courses.push(titleForTopic);
-
         });
+
+        if (isVitae) {
+            $bio = parser.$xml.find('topic>title').filter(function () {
+                return $(this).text() == "Projects Repository";
+            }).parent();
+            data2.projects.additionalProjects = [];
+            $bio.children("children").children("topics").children("topic").each(function (projectIndex) {
+                var titleForTopic = $(this).children("title").text();
+                data2.projects.additionalProjects[projectIndex] = {};
+                data2.projects.additionalProjects[projectIndex].details = [];
+                data2.projects.additionalProjects[projectIndex].title = titleForTopic;
+                $(this).children("children").children("topics").children("topic").each(function (detailIndex) {
+                    if (detailIndex === 0) {
+                        data2.projects.additionalProjects[projectIndex].date = $(this).children("title").text();
+                    } else {
+                        data2.projects.additionalProjects[projectIndex].details.push($(this).children("title").text());
+                    }
+                });
+            });
+
+            $bio = parser.$xml.find('topic>title').filter(function () {
+                return $(this).text() == "Courses Repository";
+            }).parent();
+            data2.courses.additionalCourses = [];
+            $bio.children("children").children("topics").children("topic").each(function () {
+                var titleForTopic = $(this).children("title").text();
+                data2.courses.additionalCourses.push(titleForTopic);
+            });
+
+            $bio = parser.$xml.find('topic>title').filter(function () {
+                return $(this).text() == "Skills Repository";
+            }).parent();
+            data2.skills.additionalSkills = [];
+            $bio.children("children").children("topics").children("topic").each(function () {
+                data2.skills.additionalSkills.push($(this).children("title").text());
+           
+            });
+            $bio = parser.$xml.find('topic>title').filter(function () {
+                return $(this).text() == "Work Experience Repository";
+            }).parent();
+            data2.work_experience.additionalJobs = [];
+            $bio.children("children").children("topics").children("topic").each(function (projectIndex) {
+                var titleForTopic = $(this).children("title").text();
+                data2.work_experience.additionalJobs[projectIndex] = {};
+                data2.work_experience.additionalJobs[projectIndex].name = titleForTopic;
+                $(this).children("children").children("topics").children("topic").each(function (detailIndex) {
+                    if (detailIndex === 0) {
+                        data2.work_experience.additionalJobs[projectIndex].date = $(this).children("title").text();
+                    }
+                });
+            });
+
+            $bio = parser.$xml.find('topic>title').filter(function () {
+                return $(this).text() == "Education Repository";
+            }).parent();
+            data2.education.additionalSchools = [];
+            $bio.children("children").children("topics").children("topic").each(function () {
+                var titleForTopic = $(this).children("title").text();
+                data2.education.additionalSchools.push(titleForTopic);
+            });
+        }
         vm.refreshData();
     };
 

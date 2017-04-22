@@ -278,14 +278,14 @@ var data = {
 
 var data2 = {
     "bio": {
-        "phone": "+1 972-850-6310",
-        "twitter": "larc63",
+        "phone": "+1 972-850-6311",
+        "twitter": "larc62",
         "github": "larc63",
         "email": "larc63@gmail.com",
         "linkedin": "larc63"
     },
     "skills": {
-        "skills": ["Java", "Swift", "JavaScript", "C/Objective-C", "Scrum"]
+        "skills": ["J", "S", "", "C/-C", "s"]
     },
     "courses": {
         "courses": ["iOS Persistence and Core Data at Udacity (2015)", "iOS Networking with Swift at Udacity (2015)", "UIKit Fundamentals I at Udacity (2015)", "UIKit Fundamentals II at Udacity (2015)", "Intro to iOS App Development Swift at Udacity (2015)"]
@@ -313,45 +313,45 @@ var data2 = {
     },
     "projects": {
         "projects": [{
-            "date": "2015 - 16",
-            "details": ["Ported the communications layer on a utility that talks to TI calculators using Chrome's USB API."],
-            "title": "Chrome App for Texas Instruments via Dextra Technologies"
-        }, {
-            "date": "2013-16",
-            "details": ["Wrote and reviewed user requirements", "Designed and implemented features related to interacting with emulated hardware", "Helped the develoment team solve memory and performance issues", "https://education.ti.com/en/us/products/computer_software/ti-smartview-software/ti-smartview-ce-emulator-software-for-the-ti-84-plus-family/tabs/overview"],
-            "title": "TI Smartview for Texas Instruments via Dextra Technologies"
-        }, {
-            "date": " 2013 - 15",
-            "details": ["Worked closely with the Product Managers to write and review User Requirements", "Ported and implemented z80-based calculator emulators to html5.", "Pilots involving 800k users without any reported issues.", "https://education.ti.com/en/us/about/press-center/press-listing-content-module/6-20-2013-ccss"],
-            "title": "ExamCalcs for Texas Instruments via Dextra Technologies"
-        }, {
-            "date": "2011-12",
-            "details": ["Designed and implemented the infrastructure for creating new classroom activities using the Lua scripting language.", "The C counterpart for the Lua bindings, as well as the Lua engine itself gets cross-compiled to run on different platform including iOS, Nucleus and desktop operating systems.", "https://education.ti.com/sites/US/downloads/pdf/TI-Nspire%20Navigator%203%202%20Release%20Notes.pdf"],
-            "title": "Image Question  for Texas Instruments via Dextra Technologies"
-        }, {
-            "date": "2009",
-            "details": ["Wrote an application that reproduces the strokes necessary for writing chinese characters as well as playing their sound", "Developed a Chinese character writing tutor for the iPhone", "https://itunes.apple.com/us/app/50-chinese-words-learn-to/id312982180?mt=8"],
-            "title": "50 Chinese Words for One Element"
-        }, {
-            "date": "2008 - 2009",
-            "details": ["Wrote graphics engine using C and OpenGL ES", "Created art for a card game targeted towards the iPhone.", "https://itunes.apple.com/us/app/big-2-classic-free/id323375748?mt=8"],
-            "title": "Big 2 Poker "
+//            "date": "2015 - 16",
+//            "details": ["Ported the communications layer on a utility that talks to TI calculators using Chrome's USB API.", "Implemented user-facing features in AngularJS in combination with Chrome APIs."],
+//            "title": "Chrome App for Texas Instruments via Dextra Technologies"
 //        }, {
-//            "date": "2008 - 09",
-//            "details": ["Wrote a relegious-focused application that shows images, plays sounds and uses the iPhone's accelerometer to interact with the user."],
-//            "title": "iAarti for Katha Films"
-        }, {
-            "date": "2009",
-            "details": ["Ported the directx impementation to the iPhone's OpenGL ES framework", "Translated levels originally designed for desktop/mouse to be usable on a touch device", "Game was awarded a bronze medal by pocketgamer.uk", " http://www.pocketgamer.co.uk/r/iPhone/Circulate+%28iPhone%29/review.asp?c=11151&tab=tips"],
-            "title": "Circulate for Lemonquest"
+//            "date": "2013-16",
+//            "details": ["Wrote and reviewed user requirements", "Designed and implemented features related to interacting with emulated hardware", "Helped the develoment team solve memory and performance issues", "https://education.ti.com/en/us/products/computer_software/ti-smartview-software/ti-smartview-ce-emulator-software-for-the-ti-84-plus-family/tabs/overview"],
+//            "title": "TI Smartview for Texas Instruments via Dextra Technologies"
 //        }, {
-//            "date": "2008",
-//            "details": ["Ported the directx impementation to the iPhone's OpenGL ES framework", "Implemented 3d audio library that maps the user's location to reproduce sounds in a 3d-mapped manner using the OpenAL library for iPhone."],
-//            "title": "Circulate Prologue for Lemonquest"
+//            "date": " 2013 - 15",
+//            "details": ["Worked closely with the Product Managers to write and review User Requirements", "Ported and implemented z80-based calculator emulators to html5.", "Pilots involving 800k users without any reported issues.", "https://education.ti.com/en/us/about/press-center/press-listing-content-module/6-20-2013-ccss"],
+//            "title": "ExamCalcs for Texas Instruments via Dextra Technologies"
 //        }, {
-//            "date": "2007 - 08",
-//            "details": ["Developed and ported first prototype for the brickbreaker game using the Celestial framework for iPhone", "After getting the first company-wide prototype to work, our office was able to take on more projects than what would have originally been assigned to us."],
-//            "title": "Blockbreaker for iPhone for Gameloft"
+//            "date": "2011-12",
+//            "details": ["Designed and implemented the infrastructure for creating new classroom activities using the Lua scripting language.", "The C counterpart for the Lua bindings, as well as the Lua engine itself gets cross-compiled to run on different platform including iOS, Nucleus and desktop operating systems."],
+//            "title": "Image Question  for Texas Instruments via Dextra Technologies"
+//        }, {
+//            "date": "2009",
+//            "details": ["Wrote an application that reproduces the strokes necessary for writing chinese characters as well as playing their sound", "Developed a Chinese character writing tutor for the iPhone", "https://itunes.apple.com/us/app/50-chinese-words-learn-to/id312982180?mt=8"],
+//            "title": "50 Chinese Words for One Element"
+//        }, {
+//            "date": "2008 - 2009",
+//            "details": ["Wrote graphics engine using C and OpenGL ES", "Created art for a card game targeted towards the iPhone.", "https://itunes.apple.com/us/app/big-2-classic-free/id323375748?mt=8"],
+//            "title": "Big 2 Poker "
+////        }, {
+////            "date": "2008 - 09",
+////            "details": ["Wrote a relegious-focused application that shows images, plays sounds and uses the iPhone's accelerometer to interact with the user."],
+////            "title": "iAarti for Katha Films"
+//        }, {
+//            "date": "2009",
+//            "details": ["Ported the directx impementation to the iPhone's OpenGL ES framework", "Translated levels originally designed for desktop/mouse to be usable on a touch device", "Game was awarded a bronze medal by pocketgamer.uk", " http://www.pocketgamer.co.uk/r/iPhone/Circulate+%28iPhone%29/review.asp?c=11151&tab=tips"],
+//            "title": "Circulate for Lemonquest"
+////        }, {
+////            "date": "2008",
+////            "details": ["Ported the directx impementation to the iPhone's OpenGL ES framework", "Implemented 3d audio library that maps the user's location to reproduce sounds in a 3d-mapped manner using the OpenAL library for iPhone."],
+////            "title": "Circulate Prologue for Lemonquest"
+////        }, {
+////            "date": "2007 - 08",
+////            "details": ["Developed and ported first prototype for the brickbreaker game using the Celestial framework for iPhone", "After getting the first company-wide prototype to work, our office was able to take on more projects than what would have originally been assigned to us."],
+////            "title": "Blockbreaker for iPhone for Gameloft"
         }]
     }
 };
