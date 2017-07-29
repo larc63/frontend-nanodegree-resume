@@ -3,6 +3,9 @@
     margin: 0;
     font-family: 'Open Sans', sans-serif;
 }
+body {
+    font-size: 14px;
+}
 
 h1 {
     font-size: 38px;
@@ -131,22 +134,22 @@ th {
 
 @media only print {
     body {
-        font-size: 10px;
+        font-size: 14px;
     }
     h1 {
-        font-size: 20px;
+        font-size: 24px;
     }
     h2 {
-        font-size: 16px;
+        font-size: 20px;
         margin: 0 0 0 0;
     }
     h3 {
-        font-size: 14px;
+        font-size: 18px;
         margin: 1px 0 0 0;
     }
     h4 {
         font-style: bold;
-        font-size: 12px;
+        font-size: 16px;
     }
     .container {
         margin-top: 1px;
@@ -159,14 +162,14 @@ th {
     }
     .title-name {
         margin-top: 2px;
-        font-size: 26px;
+        font-size: 30px;
 /*        padding: 0 1em 0 1em;*/
     }
     .title-role {
         color: #f2511b
     }
     .title-contact-info-for-print {
-        font-size: 10px;
+        font-size: 14px;
     }
     .title-contact-info {
         display: none;
@@ -174,12 +177,24 @@ th {
     .title-contact-info-for-print {
         display: block;
     }
+    
+    .skills {
+        width: 98%;
+        margin-left: 0;
+        font-size: 16px;
+    }
     .project-name {
-        font-size: 13px;
+        font-size: 18px;
+    }
+
+    .project-description {
+        font-size: 14px;
+        margin-top: 1px;
+        margin-left: 2em;
     }
     .project-date {
         text-align: right;
-        font-size: 10px;
+        font-size: 14px;
         font-style: italic;
     }
     .course-title {
