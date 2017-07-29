@@ -63,7 +63,7 @@ function XMindParser(vm) {
         var $bio = parser.$xml.find('topic>title').filter(function () {
             return $(this).text() == "Bio";
         }).parent();
-
+        // parse Bio
         $bio.children("children").children("topics").children("topic").each(function () {
             var titleForTopic = $(this).children("title").text();
             $(this).children("children").children("topics").children("topic").each(function () {
@@ -71,7 +71,7 @@ function XMindParser(vm) {
                 data2.bio[titleForTopic] = $(this).children("title").text();
             });
         });
-
+        // parse Skills
         $bio = parser.$xml.find('topic>title').filter(function () {
             return $(this).text() == "Skills";
         }).parent();
@@ -79,11 +79,11 @@ function XMindParser(vm) {
         $bio.children("children").children("topics").children("topic").each(function () {
             data2.skills.skills.push($(this).children("title").text());
         });
-
+        // Parse projects
         $bio = parser.$xml.find('topic>title').filter(function () {
             return $(this).text() == "Projects";
         }).parent();
-
+        // parse Projects
         $bio.children("children").children("topics").children("topic").each(function (projectIndex) {
             var titleForTopic = $(this).children("title").text();
             data2.projects.projects[projectIndex] = {};
@@ -98,21 +98,41 @@ function XMindParser(vm) {
             });
         });
 
+        // parse Work Experience
         $bio = parser.$xml.find('topic>title').filter(function () {
             return $(this).text() == "Work Experience";
         }).parent();
         data2.work_experience.jobs = [];
-        $bio.children("children").children("topics").children("topic").each(function (projectIndex) {
+        $bio.children("children").children("topics").children("topic").each(function (jobIndex) {
             var titleForTopic = $(this).children("title").text();
-            data2.work_experience.jobs[projectIndex] = {};
-            data2.work_experience.jobs[projectIndex].name = titleForTopic;
-            $(this).children("children").children("topics").children("topic").each(function (detailIndex) {
-                if (detailIndex === 0) {
-                    data2.work_experience.jobs[projectIndex].date = $(this).children("title").text();
+            data2.work_experience.jobs[jobIndex] = {};
+            data2.work_experience.jobs[jobIndex].name = titleForTopic;
+            $(this).children("children").children("topics").children("topic").each(function (jobDetailIndex) {
+                if (jobDetailIndex === 0) {
+                    data2.work_experience.jobs[jobIndex].date = $(this).children("title").text();
+                } else if(jobDetailIndex === 1 && $(this).children("title").text() == "Projects") {
+                    console.log("" + $(this).children("title").text());
+                    // parse Projects
+                    var projects = $(this).children("children").children("topics").children("topic");
+                    data2.work_experience.jobs[jobIndex].projects = [];
+                    projects.each(function (projectIndex) {
+                        var titleForTopic = $(this).children("title").text();
+                        data2.work_experience.jobs[jobIndex].projects[projectIndex] = {};
+                        data2.work_experience.jobs[jobIndex].projects[projectIndex].title = titleForTopic;
+                        data2.work_experience.jobs[jobIndex].projects[projectIndex].details = [];
+                        $(this).children("children").children("topics").children("topic").each(function (detailIndex) {
+                            if (detailIndex === 0) {
+                                data2.work_experience.jobs[jobIndex].projects[projectIndex].date = $(this).children("title").text();
+                            } else {
+                                data2.work_experience.jobs[jobIndex].projects[projectIndex].details.push($(this).children("title").text());
+                            }
+                        });
+                    });
                 }
             });
         });
 
+        // parse Education
         $bio = parser.$xml.find('topic>title').filter(function () {
             return $(this).text() == "Education";
         }).parent();
@@ -122,6 +142,7 @@ function XMindParser(vm) {
             data2.education.schools.push(titleForTopic);
         });
 
+        // parse Courses
         $bio = parser.$xml.find('topic>title').filter(function () {
             return $(this).text() == "Courses";
         }).parent();
@@ -165,7 +186,7 @@ function XMindParser(vm) {
             data2.skills.additionalSkills = [];
             $bio.children("children").children("topics").children("topic").each(function () {
                 data2.skills.additionalSkills.push($(this).children("title").text());
-           
+
             });
             $bio = parser.$xml.find('topic>title').filter(function () {
                 return $(this).text() == "Work Experience Repository";

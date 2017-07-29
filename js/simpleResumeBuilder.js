@@ -34,6 +34,11 @@ var Project = function (data) {
 var Job = function (data) {
     this.name = data.name;
     this.date = data.date;
+
+    this.projects = ko.observableArray([]);
+    for (k in data.projects) {
+        this.projects.push(new Project(data.projects[k]));
+    }
 };
 
 var ViewModel = function () {

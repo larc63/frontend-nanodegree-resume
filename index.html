@@ -14,7 +14,8 @@
     <link href="http://fonts.googleapis.com/css?family=Wallpoet" rel="stylesheet" type="text/css">
     <title>Luis Antonio Rodríguez Condit</title>
     <script type="text/javascript">
-    var isVitae = false;
+        var isVitae = false;
+
     </script>
 </head>
 
@@ -30,7 +31,7 @@
             <div class="col-xs-6 title-contact-info-for-print">
                 <span data-bind="text: linkedinurl"></span> <i class="fa fa-linkedin-square"></i>
                 <br>
-<!--
+                <!--
                 <span data-bind="text: githuburl"></span> <i class="fa fa-github-square"></i>
                 <br>
 -->
@@ -46,7 +47,7 @@
                 <a data-bind="attr: {href: mobileurl}" class="fa fa-phone-square"></a>
                 <a data-bind="attr: {href: twitterurl}" class="fa fa-twitter-square"></a>
                 <a data-bind="attr: {href: linkedinurl}" class="fa fa-linkedin-square"></a>
-<!--                <a data-bind="attr: {href: githuburl}" class="fa fa-github-square"></a>-->
+                <!--                <a data-bind="attr: {href: githuburl}" class="fa fa-github-square"></a>-->
             </div>
             <!--            <div class="col-xs-1"></div>-->
         </div>
@@ -61,26 +62,6 @@
         </div>
 
         <div class="col-xs-12">
-            <h2>Related Projects</h2>
-            <div data-bind="foreach: projects" class="col-xs-12">
-                <div class="col-xs-10">
-                    <h3 data-bind="text: name" class="project-name"></h3>
-                </div>
-<!--
-                <div class="col-xs-2">
-                    <div data-bind="text: date" class="project-date"></div>
-                </div>
--->
-                <div class="col-xs-12">
-                    <ul data-bind="foreach: details">
-                        <li data-bind="text: detail" class="project-description"></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="col-xs-12">
             <h2>Relevant Experience</h2>
             <div data-bind="foreach: jobs" class="col-xs-12">
                 <div class="col-xs-12">
@@ -91,8 +72,36 @@
                         <div data-bind="text: date" class="project-date"></div>
                     </div>
                 </div>
+                <div data-bind="foreach: projects" class="col-xs-12">
+                    <div class="col-xs-10">
+                        <h3 data-bind="text: name" class="project-name"></h3>
+                    </div>
+                    <div class="col-xs-12">
+                        <ul data-bind="foreach: details">
+                            <li data-bind="text: detail" class="project-description"></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
+<!--
+
+        <div class="col-xs-12">
+            <h2>Other Projects</h2>
+            <div data-bind="foreach: projects" class="col-xs-12">
+                <div class="col-xs-10">
+                    <h3 data-bind="text: name" class="project-name"></h3>
+                </div>
+                
+                <div class="col-xs-12">
+                    <ul data-bind="foreach: details">
+                        <li data-bind="text: detail" class="project-description"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+-->
+
 
 
 
