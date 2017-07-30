@@ -54,6 +54,11 @@ th {
     margin-top: 25px;
 }
 
+.work-employer {
+    margin-left: -18pt;
+    font-size: 19px;
+}
+
 .work-dates {
     font-style: italic;
 }
